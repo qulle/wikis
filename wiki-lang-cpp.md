@@ -15,16 +15,29 @@ bool Pizza_Lover::prefer(std::shared_ptr<Food> const& food) const
     return typeid(*food.get()) == typeid(Pizza);
 }
 
-// Not Exakt, raw pointer
+// Not exakt, raw pointer
 bool Salad_Lover::prefer(Food const* food) const
 {
     return dynamic_cast<Salad const*>(food);
 }
 
-// Not Exakt, smart pointer
+// Not exakt, smart pointer
 bool Salad_Lover::prefer(std::shared_ptr<Food> const& food) const
 {
     return dynamic_cast<Salad*>(food.get());
+}
+```
+
+## Generate random numbers
+```cpp
+#include <random>
+
+std::random_device eng{};
+std::uniform_int_distribution<int> dist{0, 20};
+
+for(int i{}; i < 20; ++i)
+{
+    std::cout << dist(eng) << std::endl;
 }
 ```
 
