@@ -2,7 +2,10 @@
 
 ## C#
 ### View compiled C# IL code
-Using a develop command prompt the command `$ ildasm` can be used to open a tool that can open .exe files prodced by `dotnet` or `csc`.
+Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a developer command prompt to find the command. 
+```
+$ ildasm
+```
 
 ### Dotnet commands
 ```
