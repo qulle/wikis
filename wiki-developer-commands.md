@@ -1,27 +1,9 @@
-# CMD and PowerShell commands
+# Useful commands to know when coding.
 
+## C#
+### View compiled C# IL code
+Using a develop command prompt the command `$ ildasm` can be used to open a tool that can open .exe files prodced by `dotnet` or `csc`.
 
-## 1. Ada
-### Section
-```
-```
-
-## 2. C++
-### Section
-```
-```
-
-## 3. C#
-### Section
-```
-```
-
-## 4. Python
-### Section
-```
-```
-
-## 5. PHP
-### Section
+### Dotnet commands
 ```
 ```
