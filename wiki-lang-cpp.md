@@ -316,7 +316,7 @@ void foo(T first, Ts... rest)
 // Base case
 void foo()
 {
-    std::cout << "Base-case" << std::endl;
+    std::cout << "Base case" << std::endl;
 }
 
 int main()
