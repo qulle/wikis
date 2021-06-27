@@ -77,7 +77,7 @@ bool is_palindrome(std::string const& str)
 #include <numeric>
 #include <iterator>
 
-// Get inptut
+// Get input
 std::vector<int> v {
     std::istream_iterator<int>{std::cin},
     std::istream_iterator<int>{}
