@@ -196,8 +196,8 @@ std::ostream& print(std::ostream& os, std::array<T, N>& obj);
 // Function overload std::string
 std::ostream& print(std::ostream& os, std::string const& str);
 
-// Function overload const char*
-std::ostream& print(std::ostream& os, const char* str);
+// Function overload char const*
+std::ostream& print(std::ostream& os, char const* str);
 
 // Helpfunctions
 template <typename T>
@@ -261,8 +261,8 @@ std::ostream& print(std::ostream& os, std::string const& str)
     return os;
 }
 
-// Function overload const char*
-std::ostream& print(std::ostream& os, const char* str)
+// Function overload char const*
+std::ostream& print(std::ostream& os, char const* str)
 {
     os << str;
 
