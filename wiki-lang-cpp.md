@@ -308,7 +308,7 @@ void foo(T first, Ts... rest);
 template<typename T, typename... Ts>
 void foo(T first, Ts... rest)
 {
-    std::cout << "Un-packing : " << first << std::endl;
+    std::cout << "Unpacking : " << first << std::endl;
     
     foo(rest...);
 }
