@@ -128,6 +128,11 @@ $ git push origin v1.4.0.0                                     # Push specific t
 $ git push origin --tags                                       # Push all tags to remote
 ```
 
+## Stashing
+```
+$ git stash save --keep-index --include-untracked
+```
+
 ## Special git files
 ```
 .gitignore     # Used to disregards some files and folders from being tracked
