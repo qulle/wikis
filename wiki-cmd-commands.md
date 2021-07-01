@@ -103,6 +103,7 @@ $ net use s: /delete                                      # Remove mapped drive
 ### Open EXE files
 ```
 $ start regedit                # Starts register editor
+$ start mstsc.exe              # Starts remote desktop client
 ```
 
 ### Open CPL files
