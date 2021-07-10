@@ -12,8 +12,15 @@ $ ildasm
 $ csc program.cs
 ```
 
+### Checking available C# versions
+```
+$ csc -langversion:?
+```
+
 ### Dotnet commands
 ```
+$ dotnet --version                           # Check version of dotnet
+
 $ dotnet new webapi -n <NAME>                # Create a new webapi project
 $ dotnet build                               # Build the project
 $ dotnet run                                 # Run the project
