@@ -188,3 +188,15 @@ $ Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolic
 $ notepad $profile
 Add the line: Set-Location C:\Users\<USERNAME>\Documents\
 ```
+
+## 3. Bash
+### Custom aliases in .bashrc
+```
+alias commands='printf "cls | angularinfo | npmcomponents | reloadbash | edithbash | w++17"'
+alias cls='clear'
+alias angularinfo='printf "Node version: " && node -v && printf "NPM version: " && npm -v && printf "TSC version: " && tsc --version && printf "Angular NG CLI version: " && ng --version'
+alias npmcomponents='npm list -global --depth 0'
+alias reloadbash='source ~/.bashrc'
+alias editbash='code ~/.bashrc'
+alias w++17='g++ -std=c++17 -Wall -Wextra -Wpedantic'
+```
