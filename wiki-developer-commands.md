@@ -1,8 +1,8 @@
-# Useful commands to know when coding.
+# Useful commands to know when coding
 
 ## C#
 ### View compiled C# IL code
-Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a developer command prompt to find the command. 
+Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a developer command prompt to find the command. There is also two other tools for this purpose `ILSpy` and `dnspy`, not installed by default.
 ```
 $ ildasm
 ```
@@ -34,8 +34,13 @@ $ cl /EHsc /std:c++17 program.cpp
 ```
 
 ## NPM
-### Installing angular
+### Un/Installing angular
 ```
-$ npm install -g @angular/cli@latest         # Install latest version of Angular CLI
-$ npm uninstall -g @angular/cli              # Uninstall Angular CLI
+$ npm install -g @angular/cli@latest             # Install latest version of Angular CLI
+$ npm uninstall -g @angular/cli                  # Uninstall Angular CLI
+
+$ rm -rf node_modules                            # Remove local node_modules directory from project
+$ npm uninstall --save-dev @angular/cli          # Uninstall local project version of Angular CLI
+$ npm install --save-dev @angular/cli@latest     # Install latest version of Angular CLI locally
+$ npm install                                    # Reinstall all other dependencies from package.json
 ```
