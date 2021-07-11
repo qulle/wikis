@@ -9,3 +9,4 @@ A collection of useful wikis for commands, languages, tips and tricks concerning
 
 ## Lang cheat sheet
 - [C++](/wiki-lang-cpp.md)
+- [.htaccess](/wiki-lang-htaccess.md)
