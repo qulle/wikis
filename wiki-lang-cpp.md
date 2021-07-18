@@ -54,23 +54,6 @@ for(int i{}; i < 20; ++i)
 }
 ```
 
-## Check if palindrom
-```cpp
-bool is_palindrome(std::string const& str)
-{
-    long unsigned length{str.length()};
-    for(unsigned i{}; i < length; ++i)
-    {
-        if(str[i] != str[length - 1 - i])
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
-```
-
 ## STL read and write from std
 ```cpp
 #include <algorithm>
