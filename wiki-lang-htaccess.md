@@ -3,8 +3,13 @@
 ## Enable rewrite engine and directory listing
 ```apacheconf
 RewriteEngine on
-Options +MultiViews
 Options +Indexes
+```
+
+## Enable multiviews
+Example if a file exists with same name as a directory, the server will pick the file
+```apacheconf
+Options +MultiViews
 ```
 
 ## Page to load when visiting the root
