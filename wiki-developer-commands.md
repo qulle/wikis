@@ -32,6 +32,12 @@ $ dotnet ef database update                  # Perform migrations to the databas
 
 $ dotnet tool install --global dotnet-ef     # Command to install the EF tools
 $ dotnet tool update --global dotnet-ef      # Command to update the EF tools
+
+$ dotnet list package                        # List all (nuget) packages that is used in a solution or csproj
+$ dotnet list <PROJECT-NAME> package         # List all (nuget) packages in a specific project
+
+$ dotnet list reference                      # List all project references, what csproj:s that knows/uses other csproj:s
+$ dotnet list <PROJECT-NAME> reference       # List all project references in a specific project
 ```
 
 ## C++
@@ -41,7 +47,7 @@ $ cl /EHsc /std:c++17 program.cpp
 ```
 
 ## NPM
-### Un/Installing angular
+### Un/Installing Angular
 ```
 $ npm install -g @angular/cli@latest             # Install latest version of Angular CLI
 $ npm uninstall -g @angular/cli                  # Uninstall Angular CLI
