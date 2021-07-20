@@ -1,4 +1,4 @@
-# CMD and PowerShell commands
+# CMD, PowerShell and Bash commands
 A living document with useful commands (Windows 10), not intended as a complete command reference.
 
 
