@@ -56,4 +56,9 @@ $ rm -rf node_modules                            # Remove local node_modules dir
 $ npm uninstall --save-dev @angular/cli          # Uninstall local project version of Angular CLI
 $ npm install --save-dev @angular/cli@latest     # Install latest version of Angular CLI locally
 $ npm install                                    # Reinstall all other dependencies from package.json
+
+$ npm outdated                                   # List all outdated packages
+$ npm update                                     # Update all outdated packages (minor versions)
+$ npm update "react" "react-dom"                 # Update specific outdated packages (minor versions)
+$ npm install <packagename>@latest               # Update outdated package (major version)
 ```
