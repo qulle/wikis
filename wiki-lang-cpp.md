@@ -5,7 +5,6 @@ A living document with useful C++ tips and tricks.
 ### Misc
 - [Type Checking](#type-checking)
 - [Generate random numbers](#generate-random-numbers)
-- [Check if palindrom](#check-if-palindrom)
 
 ### STL
 - [STL read and write from std](#stl-read-and-write-from-std)
