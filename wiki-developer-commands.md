@@ -75,9 +75,10 @@ $ npm install <packagename>@latest               # Update outdated package (majo
 
 ### List packages and search for security updates etc.
 ```
-$ npm list
-$ npm audit
-$ npm install
+$ npm list                                       # List all installed packages 
+$ npm audit                                      # Audit packages and search for updates
+$ npm install                                    # Install all available updates
+$ npm install <packagename>@version              # Install specific package available update
 ```
 
 ### List all globally installed packages
