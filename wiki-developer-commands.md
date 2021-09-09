@@ -41,9 +41,10 @@ $ dotnet list <PROJECT-NAME> reference           # List all project references i
 ```
 
 ## C++
-### Compiling using terminal CL
+### Compiling
 ```
-$ cl /EHsc /std:c++17 program.cpp
+$ cl /EHsc /std:c++17 program.cpp                            # Windows cl
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
 ```
 
 ## NPM
