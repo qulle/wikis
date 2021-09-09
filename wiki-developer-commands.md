@@ -48,15 +48,11 @@ $ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
 ```
 
 ## NPM
-### Basic commands
 ```
 $ npm init                                       # Init package.json
 $ npm init -y                                    # Init package.json with -y = Yes to all settings.
 $ npm instaall                                   # Install all dependencies listed in package.json
-```
 
-### Un/Installing Angular
-```
 $ npm install -g @angular/cli@latest             # Install latest version of Angular CLI
 $ npm uninstall -g @angular/cli                  # Uninstall Angular CLI
 
@@ -64,25 +60,16 @@ $ rm -rf node_modules                            # Remove local node_modules dir
 $ npm uninstall --save-dev @angular/cli          # Uninstall local project version of Angular CLI
 $ npm install --save-dev @angular/cli@latest     # Install latest version of Angular CLI locally
 $ npm install                                    # Reinstall all other dependencies from package.json
-```
 
-### Update packages
-```
 $ npm outdated                                   # List all outdated packages
 $ npm update                                     # Update all outdated packages (minor versions)
 $ npm update "react" "react-dom"                 # Update specific outdated packages (minor versions)
 $ npm install <packagename>@latest               # Update outdated package (major version)
-```
 
-### List packages and search for security updates etc.
-```
 $ npm list                                       # List all installed packages 
 $ npm audit                                      # Audit packages and search for updates
 $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
-```
 
-### List all globally installed packages
-```
 $ npm ls -g --depth 0                            # List all globally installed packages at a depth of 0.
 ```
