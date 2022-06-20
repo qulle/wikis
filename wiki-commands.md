@@ -10,6 +10,7 @@ $ hostname                   # Show name of host
 $ systeminfo                 # Show information about the system
 $ msinfo32                   # System information GUI with detailed information about the system
 $ dxdiag                     # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
+$ winver                     # Show information about Windows
 
 $ sfc /scannow               # Check all the system files and look for errors
 $ chkdsk /r                  # Scan hard drive for logical or physical errors
