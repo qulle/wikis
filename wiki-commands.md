@@ -1,6 +1,8 @@
 # CMD, PowerShell and Bash commands
 A living document with useful commands (Windows 10), not intended as a complete command reference.
 
+## Note
+This use to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in you environment`, use with causion and Google commands that you don't know.
 
 ## 1. CMD
 ### Computer
@@ -115,7 +117,6 @@ $ control wscui.cpl            # Security and Maintenance
 $ control firewall.cpl         # Windows Defender Firewall Control Panel DLL Launching Stub
 $ control hdwwiz.cpl           # Device manager
 $ control sysdm.cpl            # System properties, environment variable
-
 $ control access.cpl           # Accessibility Options
 $ control timedate.cpl         # Date and Time Properties
 $ control desk.cpl             # Display Properties
