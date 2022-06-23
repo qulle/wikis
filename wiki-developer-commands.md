@@ -1,5 +1,12 @@
 # Useful commands to know when coding
 
+## C++
+### Compiling
+```
+$ cl /EHsc /std:c++17 program.cpp                            # Windows cl
+$ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
+```
+
 ## C#
 ### View compiled C# IL code
 Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a developer command prompt to find the command. There is also two other tools for this purpose `ILSpy` and `dnspy`, not installed by default.
@@ -38,13 +45,6 @@ $ dotnet list <PROJECT-NAME> package             # List all (nuget) packages in 
 
 $ dotnet list reference                          # List all project references, what csproj:s that knows/uses other csproj:s
 $ dotnet list <PROJECT-NAME> reference           # List all project references in a specific project
-```
-
-## C++
-### Compiling
-```
-$ cl /EHsc /std:c++17 program.cpp                            # Windows cl
-$ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
 ```
 
 ## NPM
