@@ -51,7 +51,8 @@ $ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
 ```
 $ npm init                                       # Init package.json
 $ npm init -y                                    # Init package.json with -y = Yes to all settings.
-$ npm instaall                                   # Install all dependencies listed in package.json
+$ npm install                                    # Install all dependencies listed in package.json
+$ npm install -g npm@latest                      # Update to latest version of npm
 
 $ npm install -g @angular/cli@latest             # Install latest version of Angular CLI
 $ npm uninstall -g @angular/cli                  # Uninstall Angular CLI
