@@ -10,7 +10,7 @@ $ g++ -std=c++17 -Wall -Wextra -Wpedantic program.cpp        # Linux g++
 
 ## C#
 ### View compiled C# IL code
-Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a developer command prompt to find the command. There is also two other tools for this purpose `ILSpy` and `dnspy`, not installed by default.
+Compiling csharp code produces IL (CIL) code. The following command opens an application that can display the compiled IL (CIL) code. Note, might require a `developer command prompt` to find the command. There is also two other tools for this purpose `ILSpy` and `dnspy`, not installed by default.
 ```
 $ ildasm
 ```
