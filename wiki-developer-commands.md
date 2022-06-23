@@ -1,4 +1,5 @@
 # Useful commands to know when coding
+A living document with useful developer commands, not intended as a complete language reference.
 
 ## C++
 ### Compiling
@@ -73,4 +74,9 @@ $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
 
 $ npm ls -g --depth 0                            # List all globally installed packages at a depth of 0.
+```
+
+## NG (CLI)
+```
+TODO
 ```
