@@ -1,6 +1,9 @@
 # Docker commands
 A living document with useful docker commands, not intended as a complete docker reference. 
 
+## Note
+This use to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in you environment`, use with causion and Google commands that you don't know.
+
 ## 0. What is docker?
 *Docker is containerization platform, meaning that it enables you to package your applications into images and run them as containers on any platform that can run Docker*
 
