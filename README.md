@@ -2,7 +2,7 @@
 A collection of useful wikis for commands, tips and tricks concerning computer and developer related stuff.
 
 ## Note
-This use to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in you environment`, use with causion and Google commands that you don't know.
+This use to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in your environment`, use with causion and Google commands that you don't know.
 
 ## 1. [CMD | Powershell | Bash](/wiki-commands.md)
 General commands when working in different terminals.
