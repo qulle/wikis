@@ -79,7 +79,31 @@ $ npm install <packagename>@version              # Install specific package avai
 $ npm ls -g --depth 0                            # List all globally installed packages at a depth of 0.
 ```
 
-## NG (CLI)
+## Angular NG
+### Running & Compiling
 ```
-TODO
+$ ng serve
+$ ng build --aot --output-hashing=all
+```
+
+### Generate things
+```
+$ ng generate components module-name/components/component-name
+$ ng g c module-name/components/component-name
+
+$ ng generate service module-name/services/component-name/service-name
+$ ng g s module-name/services/component-name/service-name
+
+$ ng generate resolver module-name/resolvers/component-name/resolver-name
+$ ng g r module-name/resolvers/component-name/resolver-name
+
+$ ng generate pipe module-name/pipes/component-name/pipe-name
+$ ng g p module-name/pipes/component-name/pipe-name
+```
+
+## Python
+```
+$ pip install <packagename>
+$ pip freeze
+$ pip list
 ```
