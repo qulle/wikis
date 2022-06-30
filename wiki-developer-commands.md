@@ -80,30 +80,35 @@ $ npm ls -g --depth 0                            # List all globally installed p
 ```
 
 ## Angular NG
-### Running & Compiling
+### Base commands
 ```
-$ ng serve
-$ ng build --aot --output-hashing=all
+$ ng version                                     # Check current Angular version
+$ ng new <project-name>                          # Create new Angular project
+$ ng new <project-name> --directory ./           # Create new Angular project in a existing directory, ex. existing Git-directory
+$ ng serve                                       # Start the dev server usually localhost:4200
+$ ng serve --open                                # Start the dev server and open browser, short version is -o
+$ ng build --aot --output-hashing=all            # Build using Ahead of Time compilation and cache-busting hashing mode set to all
 ```
 
 ### Generate things
 ```
-$ ng generate components module-name/components/component-name
-$ ng g c module-name/components/component-name
+$ ng generate component <component-name>         # Generating component, long and short version
+$ ng g c <component-name>
 
-$ ng generate service module-name/services/component-name/service-name
-$ ng g s module-name/services/component-name/service-name
+$ ng generate service <service-name>             # Generating service, long and short version
+$ ng g s <service-name>
 
-$ ng generate resolver module-name/resolvers/component-name/resolver-name
-$ ng g r module-name/resolvers/component-name/resolver-name
+$ ng generate resolver <resolver-name>           # Generating resolver, long and short version
+$ ng g r <resolver-name>
 
-$ ng generate pipe module-name/pipes/component-name/pipe-name
-$ ng g p module-name/pipes/component-name/pipe-name
+$ ng generate pipe <pipe-name>                   # Generating pipe, long and short version
+$ ng g p <pipe-name>
 ```
 
 ## Python
 ```
-$ pip install <packagename>
-$ pip freeze
-$ pip list
+$ pip install <packagename>                      # Install packages from repository
+$ pip freeze                                     # List which modules that are installed with pip install and the versions of these modules
+$ pip list                                       # List all the Python packages installed in an environment
+$ python <script-name> <parameters>              # Run Python-script files
 ```
