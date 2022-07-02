@@ -16,5 +16,8 @@ Docker related commands with examples from dotNET.
 ## 4. [Git commands](/wiki-git-commands.md)
 Commands for version management with GIT.
 
+## 5. [.bashrc config](/wiki-bashrc.md)
+My .bashrc configuration.
+
 ## Author
 [Qulle](https://github.com/qulle/)
