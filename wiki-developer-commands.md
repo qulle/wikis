@@ -58,6 +58,10 @@ $ npm init -y                                    # Init package.json with -y = Y
 $ npm install                                    # Install all dependencies listed in package.json
 $ npm install -g npm@latest                      # Update to latest version of npm
 
+$ npm config list --json                         # List all configurations
+$ npm config set proxy <proxy-address>           # Set proxy configuration for http
+$ npm config set https-proxy <proxy-address>     # Set proxy configuration for https
+
 $ npm install -g @angular/cli@latest             # Install latest version of Angular CLI
 $ npm uninstall -g @angular/cli                  # Uninstall Angular CLI
 
