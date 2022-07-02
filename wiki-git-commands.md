@@ -4,6 +4,12 @@ A living document with useful git commands, not intended as a complete git refer
 ## Note
 This used to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in your environment`, use with causion and Google commands that you don't know.
 
+### Configurations
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email "john.doe@domain.com"
+```
+
 ## Init
 ### Start empty local git repo
 ```
@@ -37,6 +43,7 @@ $ git status
 $ git commit -m "Commit message"
 $ git commit --amend --no-edit                # Note, this will create a new commit hash and re-write history needing git push -f
 $ git commit --amend --no-edit --date=now     # Update last commit with new timestamp, also creates new commit hash
+$ git commit --amend --author="John Doe <john.doe@domain.com>" --no-edit  # Update author of the last commit
 
 $ git checkout -- <FILE>                      # Undo changes that not have been commited (-- is to target files, if branch have same name)
 $ git restore <FILE>                          # Undo changes that not have been staged
