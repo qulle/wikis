@@ -27,6 +27,9 @@ $ start .                    # Start explorer in the current directory
 
 $ path                       # Display dump of current PATH config
 $ ECHO.%PATH:;= & ECHO.%     # Display pretty dump of current PATH config
+
+$ start shell:startup        # Open the Startup folder for current user
+$ start shell:common startup # Open the Startup folder for all users
 ```
 
 ### Programs
