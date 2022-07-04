@@ -86,12 +86,13 @@ $ npm ls -g --depth 0                            # List all globally installed p
 ## Angular NG
 ### Base commands
 ```
-$ ng version                                     # Check current Angular version
-$ ng new <project-name>                          # Create new Angular project
-$ ng new <project-name> --directory ./           # Create new Angular project in a existing directory, ex. existing Git-directory
-$ ng serve                                       # Start the dev server usually localhost:4200
-$ ng serve --open                                # Start the dev server and open browser, short version is -o
-$ ng build --aot --output-hashing=all            # Build using Ahead of Time compilation and cache-busting hashing mode set to all
+$ ng version                                        # Check current Angular version
+$ ng new <project-name>                             # Create new Angular project
+$ ng new <project-name> --directory ./              # Create new Angular project in a existing directory, ex. existing Git-directory
+$ ng new <project-name> --style=scss --routing=true # Create new Angular project with SCSS and Routing enabled
+$ ng serve                                          # Start the dev server usually localhost:4200
+$ ng serve --open                                   # Start the dev server and open browser, short version is -o
+$ ng build --aot --output-hashing=all               # Build using Ahead of Time compilation and cache-busting hashing mode set to all
 ```
 
 ### Generate things
