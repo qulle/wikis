@@ -14,6 +14,9 @@ $ msinfo32                   # System information GUI with detailed information 
 $ dxdiag                     # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
 $ winver                     # Show information about Windows
 
+$ wmic bios get serialnumber                                                  # Get BIOS serial number of current machine
+$ wmic /user:Administrator /node:<remote-computer-name> bios get serialnumber # Get BIOS serial number of remote machine
+
 $ sfc /scannow               # Check all the system files and look for errors
 $ chkdsk /r                  # Scan hard drive for logical or physical errors
 $ driverquery                # Show complete list of installed drivers and history
