@@ -32,7 +32,7 @@ $ path                       # Display dump of current PATH config
 $ ECHO.%PATH:;= & ECHO.%     # Display pretty dump of current PATH config
 
 $ start shell:startup        # Open the Startup folder for current user
-$ start shell:common startup # Open the Startup folder for all users
+$ start shell:common startup # Open the Startup folder for all users (Not working from CMD, only Win + R
 ```
 
 ### Programs
@@ -43,21 +43,22 @@ C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files 
 
 ### Files and directories
 ```
-$ type <FILE>                         # Display content of file
-$ dir                                 # List files and directories
-$ tree                                # List files and directories in a tree structure
-$ tree | more                         # Limit the output by print sections of data | more works with all commands
-$ mkdir <NAME>                        # Make directory with given name
-$ rmdir <NAME>                        # Remove directory with given name, must be empty
-$ rmdir /Q /S <NAME>                  # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
+$ type <FILE>                            # Display content of file
+$ dir                                    # List files and directories
+$ tree                                   # List files and directories in a tree structure
+$ tree | more                            # Limit the output by print sections of data | more works with all commands
+$ mkdir <NAME>                           # Make directory with given name
+$ rmdir <NAME>                           # Remove directory with given name, must be empty
+$ rmdir /Q /S <NAME>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
 
-$ assoc                               # Show file associations
-$ fc /a file-one.txt file-two.txt     # Compares two files using ascii comparison
-$ fc /b file-one.jpg file-two.jpg     # Compares two files using binary comparison
+$ assoc                                  # Show file associations
+$ fc /a file-one.txt file-two.txt        # Compares two files using ascii comparison
+$ fc /b file-one.jpg file-two.jpg        # Compares two files using binary comparison
+$ fsutil file createnew test.txt 1048576 # Generate file of size 1MB
 
-$ subst                               # Display list of current virtual drives
-$ subst x: C:\Folder\Example          # Map local directory to drive letter
-$ subst x: /D                         # Remove mapped drive
+$ subst                                  # Display list of current virtual drives
+$ subst x: C:\Folder\Example             # Map local directory to drive letter
+$ subst x: /D                            # Remove mapped drive
 ```
 
 ### Manage Windows user accounts
