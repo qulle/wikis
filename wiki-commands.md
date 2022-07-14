@@ -36,7 +36,7 @@ $ path                        # Display dump of current PATH config
 $ ECHO.%PATH:;= & ECHO.%      # Display pretty dump of current PATH config
 
 $ start shell:startup         # Open the Startup folder for current user
-$ start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R
+$ start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R)
 ```
 
 ### Programs
@@ -198,13 +198,13 @@ $ Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolic
 
 ### Networking
 ```
-$ Get-DnsClientCache                                   # Display the contents of the DNS Resolver Cache (CMD command available)
+$ Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
 ```
 
 ### Set startup path through profile
 ```
 $ notepad $profile
-Set-Location C:\Users\<USERNAME>\Documents\            # Add line to the profile-file in notepad
+Set-Location C:\Users\<USERNAME>\Documents\ # Add line to the profile-file in notepad
 ```
 
 ## 3. Bash
