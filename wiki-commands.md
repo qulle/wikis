@@ -7,32 +7,36 @@ This used to be a private repo but i changed it to be public because of ease of 
 ## 1. CMD
 ### Computer
 ```
-$ ver                        # Display current version number of Windows
-$ hostname                   # Show name of host
-$ systeminfo                 # Show information about the system
-$ msinfo32                   # System information GUI with detailed information about the system
-$ dxdiag                     # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
-$ winver                     # Show information about Windows
+$ ver                         # Display current version number of Windows
+$ hostname                    # Show name of host
+$ systeminfo                  # Show information about the system
+$ msinfo32                    # System information GUI with detailed information about the system
+$ dxdiag                      # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
+$ winver                      # Show information about Windows
 
 $ wmic bios get serialnumber                                                  # Get BIOS serial number of current machine
 $ wmic /user:Administrator /node:<remote-computer-name> bios get serialnumber # Get BIOS serial number of remote machine
 
-$ sfc /scannow               # Check all the system files and look for errors
-$ chkdsk /r                  # Scan hard drive for logical or physical errors
-$ driverquery                # Show complete list of installed drivers and history
+$ fsutil fsinfo ntfsinfo   C: # Get information about the filesystem (Requires elevated privileges)
+$ fsutil fsinfo volumeInfo C: # Get information about the volume     (Requires elevated privileges)
+$ fsutil fsinfo driveType  C: # Get drive typ information
+$ fsutil fsinfo drives        # List all available drives
+$ sfc /scannow                # Check all the system files and look for errors
+$ chkdsk /r                   # Scan hard drive for logical or physical errors
+$ driverquery                 # Show complete list of installed drivers and history
 
-$ tasklist                   # List all running processes
-$ taskkill /pid <PID>        # Stop running process by pid
-$ taskkill /pid <PID> /F     # Force stop preccess by pid
+$ tasklist                    # List all running processes
+$ taskkill /pid <PID>         # Stop running process by pid
+$ taskkill /pid <PID> /F      # Force stop preccess by pid
 
-$ explorer .                 # Start explorer in the current directory
-$ start .                    # Start explorer in the current directory
+$ explorer .                  # Start explorer in the current directory
+$ start .                     # Start explorer in the current directory
 
-$ path                       # Display dump of current PATH config
-$ ECHO.%PATH:;= & ECHO.%     # Display pretty dump of current PATH config
+$ path                        # Display dump of current PATH config
+$ ECHO.%PATH:;= & ECHO.%      # Display pretty dump of current PATH config
 
-$ start shell:startup        # Open the Startup folder for current user
-$ start shell:common startup # Open the Startup folder for all users (Not working from CMD, only Win + R
+$ start shell:startup         # Open the Startup folder for current user
+$ start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R
 ```
 
 ### Programs
@@ -63,18 +67,18 @@ $ subst x: /D                            # Remove mapped drive
 
 ### Manage Windows user accounts
 ```
-$ net users                           # Display all user accounts
-$ net users <ACCOUNT-NAME>            # Detaild information about user account
-$ net users <ACCOUNT-NAME> *          # Change password of account
-$ net users add <ACCOUNT-NAME>        # Add user account
-$ net users remove <ACCOUNT-NAME>     # Remove user account
+$ net users                              # Display all user accounts
+$ net users <ACCOUNT-NAME>               # Detaild information about user account
+$ net users <ACCOUNT-NAME> *             # Change password of account
+$ net users add <ACCOUNT-NAME>           # Add user account
+$ net users remove <ACCOUNT-NAME>        # Remove user account
 
-$ whoami                              # Show current user
-$ whoami /user                        # Show detailed info of current user
-$ whoami /groups                      # Show what groups the current user is member of
+$ whoami                                 # Show current user
+$ whoami /user                           # Show detailed info of current user
+$ whoami /groups                         # Show what groups the current user is member of
 
-$ gpupdate                            # Update the domain group policy
-$ gpupdate /f                         # Force update the group policy
+$ gpupdate                               # Update the domain group policy
+$ gpupdate /f                            # Force update the group policy
 
 $ runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check groups for other user ex. domain admin account
 ```
