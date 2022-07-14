@@ -91,7 +91,7 @@ $ ipconfig /renew
 $ ipconfig /renew6
 $ ipconfig /release
 $ ipconfig /release6
-$ ipconfig /displaydns     # Display the contents of the DNS Resolver Cache
+$ ipconfig /displaydns     # Display the contents of the DNS Resolver Cache (PowerShell command available)
 $ ipcinfig /flushdns       # Purges the DNS Resolver cache
 
 $ getmac                   # Get mac addresses for the installed media devices
@@ -196,13 +196,76 @@ $ Set-ExecutionPolicy Restricted                       # Sets the executionpolic
 $ Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
 ```
 
+### Networking
+```
+$ Get-DnsClientCache                                   # Display the contents of the DNS Resolver Cache (CMD command available)
+```
+
 ### Set startup path through profile
 ```
 $ notepad $profile
-Add the line: Set-Location C:\Users\<USERNAME>\Documents\
+Set-Location C:\Users\<USERNAME>\Documents\            # Add line to the profile-file in notepad
 ```
 
 ## 3. Bash
+### Misc
+```
+$ grep -v <text> file.txt          # Display all rows that does't contains the <text> term
+$ grep -r <text> target-directory/ # Recursuvely search for pattern <text> in all files in the specified directory
+$ grep -i <text> file.txt          # Case insensitive search
+
+$ history                          # Display command history
+$ history | grep git               # Display alla commands that contains the word git
+$ history -c                       # Clear all history
+```
+
+### Computer
+```
+$ top                              # Monitor running processes and the resources
+```
+
+### Files and directories
+```
+$ ll                               # List files and directories in list format
+$ ls                               # List files and directories
+$ ls -la                           # List all (inc. hidden) files in list format
+$ cd                               # Change directory
+
+$ pwd                              # Print working directory
+
+$ touch file.txt                   # Create file or update timestamp if exists
+$ touch -a file.txt                # Update only the access timestamp of the file
+$ touch -m file.txt                # Update only the modify time of the file
+
+$ cat file.txt                     # Display content of file
+$ cat -n file.txt                  # Display content of file with line numbers 
+$ cat -T file.txt                  # Display content of file and mark if tab or spaces
+
+$ mv file.txt child-directory/     # Move file to other directory
+$ mv file.txt ~                    # Move file from current directory to home directory
+$ mv file.txt file-2.txt           # Rename file by moving it to same location
+
+$ mkdir <name>                     # Create directory
+$ rmdir <name>                     # Remove empty directory
+
+$ rm -i *.txt                      # Remove files, prompt user to confirm
+$ rm -r                            # Remove directories including files in them
+$ rm -f                            # Remove files and directories without prompting the user
+$ rm -rf                           # Use with caution
+```
+
+### Programs
+```
+$ which python3                    # Identify and report the location of the provided executable
+```
+
+### Networking
+```
+$ ifconfig                         # Used for displaying current network configuration information
+
+$ curl -L google.com               # Makes Get request downloading the content for the resource (index.html)
+```
+
 ### Custom aliases in .bashrc
 ```
 alias w++17='g++ -std=c++17 -Wall -Wextra -Wpedantic' # Full example: https://github.com/qulle/wikis/edit/main/wiki-bashrc.md
