@@ -61,6 +61,9 @@ $ git reset --hard HEAD~1                     # Undo the last commit and don't p
 $ git reset --hard HEAD@{1}                   # Undo the previous reset --hard HEAD~1
 $ git reflog                                  # Show log och git ref history
 $ git reset --hard <COMMIT HASH>              # Undo any reset --hard
+
+$ git rm --cached <file>                      # To stop tracking a file, it must be removed from the index
+$ git rm -r --cached <folder>                 # To stop tracking a folder, it must be removed from the index
 ```
 
 ### Push
