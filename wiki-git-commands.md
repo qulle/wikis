@@ -41,29 +41,31 @@ $ git status
 ### Commit
 ```
 $ git commit -m "Commit message"
-$ git commit --amend --no-edit                # Note, this will create a new commit hash and re-write history needing git push -f
-$ git commit --amend --no-edit --date=now     # Update last commit with new timestamp, also creates new commit hash
+$ git commit --amend --no-edit                 # Note, this will create a new commit hash and re-write history needing git push -f
+$ git commit --amend --no-edit --date=now      # Update last commit with new timestamp, also creates new commit hash
 $ git commit --amend --author="John Doe <john.doe@domain.com>" --no-edit  # Update author of the last commit
 
-$ git checkout -- <FILE>                      # Undo changes that not have been commited (-- is to target files, if branch have same name)
-$ git restore <FILE>                          # Undo changes that not have been staged
-$ git restore --staged <FILE>                 # Remove files that have been changed and staged
+$ git checkout -- <FILE>                       # Undo changes that not have been commited (-- is to target files, if branch have same name)
+$ git restore <FILE>                           # Undo changes that not have been staged
+$ git restore --staged <FILE>                  # Remove files that have been changed and staged
 
-$ git clean -n                                # List files that will be deleted
-$ git clean -f                                # Delete untracked files
-$ git clean -fd                               # Delete untracked files and directories
-$ git clean -fX                               # Delete ignored files
-$ git clean -fx                               # Delete ignored and untracked files
+$ git clean -n                                 # List files that will be deleted
+$ git clean -f                                 # Delete untracked files
+$ git clean -fd                                # Delete untracked files and directories
+$ git clean -fX                                # Delete ignored files
+$ git clean -fx                                # Delete ignored and untracked files
 
-$ git reset                                   # Unstage files that have been added but not commited
-$ git reset --soft HEAD~1                     # Undo the last commit and preserve changes that were made as unstaged files
-$ git reset --hard HEAD~1                     # Undo the last commit and don't preserve changes
-$ git reset --hard HEAD@{1}                   # Undo the previous reset --hard HEAD~1
-$ git reflog                                  # Show log och git ref history
-$ git reset --hard <COMMIT HASH>              # Undo any reset --hard
+$ git reset                                    # Unstage files that have been added but not commited
+$ git reset --soft HEAD~1                      # Undo the last commit and preserve changes that were made as unstaged files
+$ git reset --hard HEAD~1                      # Undo the last commit and don't preserve changes
+$ git reset --hard HEAD@{1}                    # Undo the previous reset --hard HEAD~1
+$ git reflog                                   # Show log och git ref history
+$ git reset --hard <COMMIT HASH>               # Undo any reset --hard
 
-$ git rm --cached <file>                      # To stop tracking a file, it must be removed from the index
-$ git rm -r --cached <folder>                 # To stop tracking a folder, it must be removed from the index
+$ git rm --cached <file>                       # To stop tracking a file, it must be removed from the index
+$ git rm -r --cached <folder>                  # To stop tracking a folder, it must be removed from the index
+
+$ git mv --force src/ts/file.ts src/ts/File.ts # Rename file that already is tracked
 ```
 
 ### Push
