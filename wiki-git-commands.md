@@ -134,13 +134,14 @@ $ git log --graph --oneline --all
 ## Tagging
 ```
 $ git tag                                                      # List available tags
-$ git tag v1.4.0.0                                             # Basic lightweight tag
-$ git tag -a v1.4.0.0 -m "Release version 1.4.0.0"             # Annotated tag
-$ git tag -a v1.2.0.0 -m "Release version 1.2.0.0" 9fceb02     # Tagging later by specifying commit hash
-$ git tag -d v1.4.0.0                                          # Delete tag
+$ git tag v1.4.0.                                              # Basic lightweight tag
+$ git tag -a v1.4.0 -m "Release version 1.4.0"                 # Annotated tag
+$ git tag -a v1.2.0 -m "Release version 1.2.0" 9fceb02         # Tagging later by specifying commit hash
+$ git tag -d v1.4.0                                            # Delete tag
 
-$ git push origin v1.4.0.0                                     # Push specific tag to remote
+$ git push origin v1.4.0                                       # Push specific tag to remote
 $ git push origin --tags                                       # Push all tags to remote
+$ git push origin --tags --force                               # Force push all tags to remote
 ```
 
 ## Stashing
