@@ -244,6 +244,7 @@ $ touch file.txt                   # Create file or update timestamp if exists
 $ touch -a file.txt                # Update only the access timestamp of the file
 $ touch -m file.txt                # Update only the modify time of the file
 
+$ file data.csv                    # Check file encoding information
 $ cat file.txt                     # Display content of file
 $ cat -n file.txt                  # Display content of file with line numbers 
 $ cat -T file.txt                  # Display content of file and mark if tab or spaces
