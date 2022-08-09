@@ -48,6 +48,13 @@ C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files 
 ### Files and directories
 ```
 $ type <FILE>                            # Display content of file
+$ chcp                                   # Display Console Code Page
+$ chcp 65001                             # Set Code Page 65001 => UTF-8
+$ chcp 1252                              # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
+$ chcp 437                               # Set Code Page 437   => Character set of the original IBM PC
+$ chcp 850                               # Set Code Page 850   => Latin-1 - Western European languages
+$ charmap                                # Check characters of different encodings and fonts installed on your system
+
 $ dir                                    # List files and directories
 $ tree                                   # List files and directories in a tree structure
 $ tree | more                            # Limit the output by print sections of data | more works with all commands
