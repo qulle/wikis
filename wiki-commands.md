@@ -203,6 +203,16 @@ $ Set-ExecutionPolicy Restricted                       # Sets the executionpolic
 $ Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
 ```
 
+### Disable NetworkAdapter PowerManagement
+```
+$ $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
+$ $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
+$ $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
+
+$ $WiFiAdapter | Format-List -Property '*'     # To list all properties on variable
+$ $WiFiAdapter.getType()                       # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
+```
+
 ### Networking
 ```
 $ Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
