@@ -7,36 +7,36 @@ This used to be a private repo but i changed it to be public because of ease of 
 ## 1. CMD
 ### Computer
 ```
-$ ver                         # Display current version number of Windows
-$ hostname                    # Show name of host
-$ systeminfo                  # Show information about the system
-$ msinfo32                    # System information GUI with detailed information about the system
-$ dxdiag                      # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
-$ winver                      # Show information about Windows
+C:\> ver                         # Display current version number of Windows
+C:\> hostname                    # Show name of host
+C:\> systeminfo                  # Show information about the system
+C:\> msinfo32                    # System information GUI with detailed information about the system
+C:\> dxdiag                      # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
+C:\> winver                      # Show information about Windows
 
-$ wmic bios get serialnumber                                                  # Get BIOS serial number of current machine
-$ wmic /user:Administrator /node:<remote-computer-name> bios get serialnumber # Get BIOS serial number of remote machine
+C:\> wmic bios get serialnumber                                                  # Get BIOS serial number of current machine
+C:\> wmic /user:Administrator /node:<remote-computer-name> bios get serialnumber # Get BIOS serial number of remote machine
 
-$ fsutil fsinfo ntfsinfo   C: # Get information about the filesystem (Requires elevated privileges)
-$ fsutil fsinfo volumeInfo C: # Get information about the volume     (Requires elevated privileges)
-$ fsutil fsinfo driveType  C: # Get drive typ information
-$ fsutil fsinfo drives        # List all available drives
-$ sfc /scannow                # Check all the system files and look for errors
-$ chkdsk /r                   # Scan hard drive for logical or physical errors
-$ driverquery                 # Show complete list of installed drivers and history
+C:\> fsutil fsinfo ntfsinfo   C: # Get information about the filesystem (Requires elevated privileges)
+C:\> fsutil fsinfo volumeInfo C: # Get information about the volume     (Requires elevated privileges)
+C:\> fsutil fsinfo driveType  C: # Get drive typ information
+C:\> fsutil fsinfo drives        # List all available drives
+C:\> sfc /scannow                # Check all the system files and look for errors
+C:\> chkdsk /r                   # Scan hard drive for logical or physical errors
+C:\> driverquery                 # Show complete list of installed drivers and history
 
-$ tasklist                    # List all running processes
-$ taskkill /pid <PID>         # Stop running process by pid
-$ taskkill /pid <PID> /F      # Force stop preccess by pid
+C:\> tasklist                    # List all running processes
+C:\> taskkill /pid <PID>         # Stop running process by pid
+C:\> taskkill /pid <PID> /F      # Force stop preccess by pid
 
-$ explorer .                  # Start explorer in the current directory
-$ start .                     # Start explorer in the current directory
+C:\> explorer .                  # Start explorer in the current directory
+C:\> start .                     # Start explorer in the current directory
 
-$ path                        # Display dump of current PATH config
-$ ECHO.%PATH:;= & ECHO.%      # Display pretty dump of current PATH config
+C:\> path                        # Display dump of current PATH config
+C:\> ECHO.%PATH:;= & ECHO.%      # Display pretty dump of current PATH config
 
-$ start shell:startup         # Open the Startup folder for current user
-$ start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R)
+C:\> start shell:startup         # Open the Startup folder for current user
+C:\> start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R)
 ```
 
 ### Programs
@@ -47,128 +47,128 @@ C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files 
 
 ### Files and directories
 ```
-$ type <FILE>                            # Display content of file
-$ chcp                                   # Display Console Code Page
-$ chcp 65001                             # Set Code Page 65001 => UTF-8
-$ chcp 1252                              # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
-$ chcp 437                               # Set Code Page 437   => Character set of the original IBM PC
-$ chcp 850                               # Set Code Page 850   => Latin-1 - Western European languages
-$ charmap                                # Check characters of different encodings and fonts installed on your system
+C:\> type <FILE>                            # Display content of file
+C:\> chcp                                   # Display Console Code Page
+C:\> chcp 65001                             # Set Code Page 65001 => UTF-8
+C:\> chcp 1252                              # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
+C:\> chcp 437                               # Set Code Page 437   => Character set of the original IBM PC
+C:\> chcp 850                               # Set Code Page 850   => Latin-1 - Western European languages
+C:\> charmap                                # Check characters of different encodings and fonts installed on your system
 
-$ dir                                    # List files and directories
-$ tree                                   # List files and directories in a tree structure
-$ tree | more                            # Limit the output by print sections of data | more works with all commands
-$ mkdir <NAME>                           # Make directory with given name
-$ rmdir <NAME>                           # Remove directory with given name, must be empty
-$ rmdir /Q /S <NAME>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
+C:\> dir                                    # List files and directories
+C:\> tree                                   # List files and directories in a tree structure
+C:\> tree | more                            # Limit the output by print sections of data | more works with all commands
+C:\> mkdir <NAME>                           # Make directory with given name
+C:\> rmdir <NAME>                           # Remove directory with given name, must be empty
+C:\> rmdir /Q /S <NAME>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
 
-$ assoc                                  # Show file associations
-$ fc /a file-one.txt file-two.txt        # Compares two files using ascii comparison
-$ fc /b file-one.jpg file-two.jpg        # Compares two files using binary comparison
-$ fsutil file createnew test.txt 1048576 # Generate file of size 1MB
+C:\> assoc                                  # Show file associations
+C:\> fc /a file-one.txt file-two.txt        # Compares two files using ascii comparison
+C:\> fc /b file-one.jpg file-two.jpg        # Compares two files using binary comparison
+C:\> fsutil file createnew test.txt 1048576 # Generate file of size 1MB
 
-$ subst                                  # Display list of current virtual drives
-$ subst x: C:\Folder\Example             # Map local directory to drive letter
-$ subst x: /D                            # Remove mapped drive
+C:\> subst                                  # Display list of current virtual drives
+C:\> subst x: C:\Folder\Example             # Map local directory to drive letter
+C:\> subst x: /D                            # Remove mapped drive
 ```
 
 ### Manage Windows user accounts
 ```
-$ net users                              # Display all user accounts
-$ net users <ACCOUNT-NAME>               # Detaild information about user account
-$ net users <ACCOUNT-NAME> *             # Change password of account
-$ net users add <ACCOUNT-NAME>           # Add user account
-$ net users remove <ACCOUNT-NAME>        # Remove user account
+C:\> net users                              # Display all user accounts
+C:\> net users <ACCOUNT-NAME>               # Detaild information about user account
+C:\> net users <ACCOUNT-NAME> *             # Change password of account
+C:\> net users add <ACCOUNT-NAME>           # Add user account
+C:\> net users remove <ACCOUNT-NAME>        # Remove user account
 
-$ whoami                                 # Show current user
-$ whoami /user                           # Show detailed info of current user
-$ whoami /groups                         # Show what groups the current user is member of
+C:\> whoami                                 # Show current user
+C:\> whoami /user                           # Show detailed info of current user
+C:\> whoami /groups                         # Show what groups the current user is member of
 
-$ gpupdate                               # Update the domain group policy
-$ gpupdate /f                            # Force update the group policy
+C:\> gpupdate                               # Update the domain group policy
+C:\> gpupdate /f                            # Force update the group policy
 
-$ runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check groups for other user ex. domain admin account
+C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check groups for other user ex. domain admin account
 ```
 
 ### Networking
 ```
-$ ipconfig                 # Basic network interfaces
-$ ipconfig /all            # Detailed network interfaces
-$ ipconfig /renew
-$ ipconfig /renew6
-$ ipconfig /release
-$ ipconfig /release6
-$ ipconfig /displaydns     # Display the contents of the DNS Resolver Cache (PowerShell command available)
-$ ipcinfig /flushdns       # Purges the DNS Resolver cache
+C:\> ipconfig                 # Basic network interfaces
+C:\> ipconfig /all            # Detailed network interfaces
+C:\> ipconfig /renew
+C:\> ipconfig /renew6
+C:\> ipconfig /release
+C:\> ipconfig /release6
+C:\> ipconfig /displaydns     # Display the contents of the DNS Resolver Cache (PowerShell command available)
+C:\> ipcinfig /flushdns       # Purges the DNS Resolver cache
 
-$ getmac                   # Get mac addresses for the installed media devices
-$ arp -a                   # Display ARP (address resolution protocol) cache
-$ arp -d                   # Clear ARP cache
+C:\> getmac                   # Get mac addresses for the installed media devices
+C:\> arp -a                   # Display ARP (address resolution protocol) cache
+C:\> arp -d                   # Clear ARP cache
 
-$ nslookup google.com      # Name server lookup, display IP for domain
+C:\> nslookup google.com      # Name server lookup, display IP for domain
 
-$ ping <HOST/IP>
-$ ping <HOST/IP> -t        # Continuous ping
+C:\> ping <HOST/IP>
+C:\> ping <HOST/IP> -t        # Continuous ping
 
-$ tracert <HOST/IP>        # Trace route to destination
-$ pathping <HOST/IP>       # Combines tracert and ping
+C:\> tracert <HOST/IP>        # Trace route to destination
+C:\> pathping <HOST/IP>       # Combines tracert and ping
 
-$ nbtstat                  # Utility to display stats and current connections using NetBios over TCP/IP
-$ netstat -a               # Display network connections
-$ netstat -b               # Display network connections and processes (requires admin privileges)
+C:\> nbtstat                  # Utility to display stats and current connections using NetBios over TCP/IP
+C:\> netstat -a               # Display network connections
+C:\> netstat -b               # Display network connections and processes (requires admin privileges)
 
-$ net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
-$ net use s: /delete                                      # Remove mapped drive
+C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
+C:\> net use s: /delete                                      # Remove mapped drive
 ```
 
 ### Open EXE files
 ```
-$ start regedit                # Starts register editor
-$ start mstsc.exe              # Starts remote desktop client
+C:\> start regedit                # Starts register editor
+C:\> start mstsc.exe              # Starts remote desktop client
 ```
 
 ### Open CPL files
 ```
-$ control appwiz.cpl           # Add and remove programs
-$ control inetcpl.cpl          # Internet settings
-$ control wscui.cpl            # Security and Maintenance
-$ control firewall.cpl         # Windows Defender Firewall Control Panel DLL Launching Stub
-$ control hdwwiz.cpl           # Device manager
-$ control sysdm.cpl            # System properties, environment variable
-$ control access.cpl           # Accessibility Options
-$ control timedate.cpl         # Date and Time Properties
-$ control desk.cpl             # Display Properties
-$ control joy.cpl              # Joystick Properties
-$ control main.cpl             # Mouse Properties
-$ control ncpa.cpl             # Network Connections
-$ control ncpl.cpl             # Network Properties
-$ control telephon.cpl         # Phone and Modem options
-$ control powercfg.cpl         # Power Management
-$ control intl.cpl             # Regional settings
-$ control mmsys.cpl sounds     # Sound Properties
-$ control mmsys.cpl            # Sounds and Audio Device Properties
-$ control nusrmgr.cpl          # User settings
+C:\> control appwiz.cpl           # Add and remove programs
+C:\> control inetcpl.cpl          # Internet settings
+C:\> control wscui.cpl            # Security and Maintenance
+C:\> control firewall.cpl         # Windows Defender Firewall Control Panel DLL Launching Stub
+C:\> control hdwwiz.cpl           # Device manager
+C:\> control sysdm.cpl            # System properties, environment variable
+C:\> control access.cpl           # Accessibility Options
+C:\> control timedate.cpl         # Date and Time Properties
+C:\> control desk.cpl             # Display Properties
+C:\> control joy.cpl              # Joystick Properties
+C:\> control main.cpl             # Mouse Properties
+C:\> control ncpa.cpl             # Network Connections
+C:\> control ncpl.cpl             # Network Properties
+C:\> control telephon.cpl         # Phone and Modem options
+C:\> control powercfg.cpl         # Power Management
+C:\> control intl.cpl             # Regional settings
+C:\> control mmsys.cpl sounds     # Sound Properties
+C:\> control mmsys.cpl            # Sounds and Audio Device Properties
+C:\> control nusrmgr.cpl          # User settings
 ```
 
 ### Open MSC files
 ```
-$ start certmgr.msc            # Certificate Manager
-$ start ciadv.msc              # Indexing Service
-$ start compmgmt.msc           # Computer management
-$ start devmgmt.msc            # Device Manager
-$ start dfrg.msc               # Defragment
-$ start diskmgmt.msc           # Disk Management
-$ start fsmgmt.msc             # Folder Sharing Management
-$ start eventvwr.msc           # Event Viewer
-$ start gpedit.msc             # Group Policy
-$ start iis.msc                # Internet Information Services
-$ start lusrmgr.msc            # Local Users and Groups
-$ start mscorcfg.msc           # Net configurations
-$ start ntmsmgr.msc            # Removable Storage
-$ start perfmon.msc            # Performance Manager
-$ start secpol.msc             # Local Security Policy
-$ start services.msc           # System Services
-$ start wmimgmt.msc            # Windows Management 
+C:\> start certmgr.msc            # Certificate Manager
+C:\> start ciadv.msc              # Indexing Service
+C:\> start compmgmt.msc           # Computer management
+C:\> start devmgmt.msc            # Device Manager
+C:\> start dfrg.msc               # Defragment
+C:\> start diskmgmt.msc           # Disk Management
+C:\> start fsmgmt.msc             # Folder Sharing Management
+C:\> start eventvwr.msc           # Event Viewer
+C:\> start gpedit.msc             # Group Policy
+C:\> start iis.msc                # Internet Information Services
+C:\> start lusrmgr.msc            # Local Users and Groups
+C:\> start mscorcfg.msc           # Net configurations
+C:\> start ntmsmgr.msc            # Removable Storage
+C:\> start perfmon.msc            # Performance Manager
+C:\> start secpol.msc             # Local Security Policy
+C:\> start services.msc           # System Services
+C:\> start wmimgmt.msc            # Windows Management 
 ```
 
 ### Windows enviroment path variables
@@ -193,34 +193,34 @@ $ start wmimgmt.msc            # Windows Management
 ## 2. PowerShell
 ### Create new GUID
 ```
-$ [guid]::NewGuid()
+C:\> [guid]::NewGuid()
 ```
 
 ### Script execution policy
 ```
-$ Get-ExecutionPolicy -List                            # List the different profiles available for restricting execution
-$ Set-ExecutionPolicy Restricted                       # Sets the executionpolicy for the LocalMachine (requires admin privileges)
-$ Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
+C:\> Get-ExecutionPolicy -List                            # List the different profiles available for restricting execution
+C:\> Set-ExecutionPolicy Restricted                       # Sets the executionpolicy for the LocalMachine (requires admin privileges)
+C:\> Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
 ```
 
 ### Disable NetworkAdapter PowerManagement
 ```
-$ $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
-$ $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
-$ $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
+C:\> $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
+C:\> $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
+C:\> $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
 
-$ $WiFiAdapter | Format-List -Property '*'     # To list all properties on variable
-$ $WiFiAdapter.getType()                       # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
+C:\> $WiFiAdapter | Format-List -Property '*'     # To list all properties on variable
+C:\> $WiFiAdapter.getType()                       # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
 ```
 
 ### Networking
 ```
-$ Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
+C:\> Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
 ```
 
 ### Set startup path through profile
 ```
-$ notepad $profile
+C:\> notepad $profile
 Set-Location C:\Users\<USERNAME>\Documents\ # Add line to the profile-file in notepad
 ```
 
