@@ -32,6 +32,7 @@ $ csc -langversion:?
 ```
 $ dotnet --version                               # Check version of dotnet
 
+$ dotnet new gitignore                           # Create a .gitignore file with useful content
 $ dotnet new webapi -n <NAME>                    # Create a new webapi project
 $ dotnet build                                   # Build the project
 $ dotnet run                                     # Run the project
