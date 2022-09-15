@@ -146,7 +146,14 @@ $ git push origin --tags --force                               # Force push all 
 
 ## Stashing
 ```
-$ git stash save --keep-index --include-untracked
+$ git stash save --keep-index --include-untracked     # Make stash of all files
+$ git stash list                                      # List all stashes
+$ git stash show                                      # Show contents of latest stash
+$ git stash show stash@{index}                        # Show contents of specific stash
+$ git stash apply                                     # Get latest stashed changes back, without removing the stash from the history
+$ git stash apply stash@{index}                       # Get specific stashed changes back, without removing the stash from the history
+$ git stash pop                                       # Get latest stashed changes and remove from history
+$ git stash pop stash@{index}                         # Get specific stashed changes and remove from history
 ```
 
 ## Special git files
