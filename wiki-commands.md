@@ -203,6 +203,11 @@ C:\> Set-ExecutionPolicy Restricted                       # Sets the executionpo
 C:\> Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
 ```
 
+### Export list of installed programs to textfile
+```
+C:\> Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*,HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table -AutoSize > $Profile\..\..\InstalledPrograms.txt
+```
+
 ### Disable NetworkAdapter PowerManagement
 ```
 C:\> $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
