@@ -129,6 +129,10 @@ $ git rebase -i <COMMIT-HASH>     # Enables powerful commands to be made on hist
 $ git log
 $ git log --pretty=oneline
 $ git log --graph --oneline --all
+
+$ git ls-tree -r master --name-only                            # List all files that are tracked by Git from current directory and down
+$ git ls-files                                                 # Alias for the command above
+$ git ls-tree --full-tree --name-only -r HEAD                  # Show all files that are tracked by Git
 ```
 
 ## Tagging
