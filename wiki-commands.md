@@ -86,6 +86,8 @@ C:\> whoami /groups                         # Show what groups the current user 
 
 C:\> gpupdate                               # Update the domain group policy
 C:\> gpupdate /f                            # Force update the group policy
+C:\> gpresult /Scope User /v                # List current policies for current user
+C:\> gpresult /Scope Computer /v            # List current policies for this machine
 
 C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check groups for other user ex. domain admin account
 ```
