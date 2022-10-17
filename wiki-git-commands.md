@@ -160,8 +160,24 @@ $ git stash pop                                       # Get latest stashed chang
 $ git stash pop stash@{index}                         # Get specific stashed changes and remove from history
 ```
 
-## Special git files
+## Special Git files
 ```
 .gitignore     # Used to disregards some files and folders from being tracked
-.gitkeep       # Non standard file, used by the community to track empty folders, git only track files
+.gitkeep       # Non standard file, used to track empty folders, git only track files
+.gitattributes # Non standard file, used to ignore language-detection
+```
+
+### .gitignore example
+```
+/node_modules
+/.cache
+/.parcel-cache
+/dist
+```
+
+### .gitattributes example
+```
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=true
 ```
