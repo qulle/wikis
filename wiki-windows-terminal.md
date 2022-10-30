@@ -1,4 +1,4 @@
-# Windows Terminal Theme
+# Windows Terminal Configurations
 A living document containing my Windows Terminal config.
 
 ## Note
