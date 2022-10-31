@@ -166,6 +166,29 @@ This used to be a private repo but i changed it to be public because of ease of 
             "selectionBackground": "#FFFFFF",
             "white": "#F8F8F2",
             "yellow": "#FFB86C"
+        },
+        {
+            "name": "Monokai",
+            "background": "#212B38",
+            "black": "#21222C",
+            "blue": "#BD93F9",
+            "brightBlack": "#6272A4",
+            "brightBlue": "#D6ACFF",
+            "brightCyan": "#A4FFFF",
+            "brightGreen": "#69FF94",
+            "brightPurple": "#FF92DF",
+            "brightRed": "#FF6E6E",
+            "brightWhite": "#F8F8F2",
+            "brightYellow": "#FFFFA5",
+            "cursorColor": "#EBCB8B",
+            "cyan": "#8BCAFD",
+            "foreground": "#F8F8F2",
+            "green": "#fc2575",
+            "purple": "#32d0d0",
+            "red": "#FF5555",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F8F8F2",
+            "yellow": "#eacb6f"
         }
     ]
 }
