@@ -19,7 +19,7 @@ Commands for version management with GIT.
 ## 5. [.bashrc config](/wiki-bashrc.md)
 My .bashrc configuration.
 
-## 6. [Windows Terminal Theme](/wiki-windows-terminal.md)
+## 6. [Windows Terminal Configurations](/wiki-windows-terminal.md)
 My Windows Terminal Configurations.
 
 ## Author
