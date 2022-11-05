@@ -20,7 +20,7 @@ Commands for version management with GIT.
 My .bashrc configuration.
 
 ## 6. [Windows Terminal Configurations](/wiki-windows-terminal.md)
-My Windows Terminal Configurations.
+My Windows Terminal configurations.
 
 ## Author
 [Qulle](https://github.com/qulle/)
