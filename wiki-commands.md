@@ -223,6 +223,11 @@ C:\> $WiFiAdapter.getType()                       # Useful to check datatype, so
 ### Networking
 ```
 C:\> Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
+
+C:\> Test-NetConnection                              # Test Ping connectivity
+C:\> Test-NetConnection -InformationLevel "Detailed" # Test Ping connectivity with detailed information
+C:\> Test-NetConnection -Port 80                     # Test TCP connectivity on port 80
+C:\> Test-NetConnection <localhost/ip> -Port 80      # Test TCP connectivity on port 80 for specified host
 ```
 
 ### Set startup path through profile
