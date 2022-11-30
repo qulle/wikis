@@ -239,6 +239,8 @@ Set-Location C:\Users\<USERNAME>\Documents\ # Add line to the profile-file in no
 ## 3. Bash
 ### Misc
 ```
+$ which $SHELL                     # Outputs current shell
+
 $ grep -v <text> file.txt          # Display all rows that does't contains the <text> term
 $ grep -r <text> target-directory/ # Recursuvely search for pattern <text> in all files in the specified directory
 $ grep -i <text> file.txt          # Case insensitive search
@@ -257,8 +259,10 @@ $ top                              # Monitor running processes and the resources
 ```
 $ ll                               # List files and directories in list format
 $ ls                               # List files and directories
-$ ls -la                           # List all (inc. hidden) files in list format
+$ ls -la                           # List all (inc. hidden) files in list format, also displays permissions
 $ cd                               # Change directory
+
+$ chmod +x script.sh               # Add execute permissions to the file script.sh
 
 $ pwd                              # Print working directory
 
