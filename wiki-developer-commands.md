@@ -83,6 +83,11 @@ $ npm install <packagename>@version              # Install specific package avai
 
 $ npm root -g                                    # Show path to global node_modules directory
 $ explorer $(npm root -g)                        # Open global node_modules in explorer
+
+$ npm link                                       # Run from project root. Will create a symlink in the global node_modules
+$ npm unlink -g                                  # Run from project root. Will remove the global symlink
+$ npm link <package-name>                        # Reference a global symlink in another local project
+
 $ npm ls -g --depth=0                            # List all globally installed packages
 $ npm ls -g --depth=0 --link=true                # List all linked packages
 $ ls -al $(npm root -g) | grep "\->"             # List all linked symlinks
