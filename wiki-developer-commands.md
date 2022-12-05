@@ -81,7 +81,8 @@ $ npm audit                                      # Audit packages and search for
 $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
 
-$ npm ls -g --depth 0                            # List all globally installed packages at a depth of 0.
+$ npm ls -g --depth=0                            # List all globally installed packages
+$ npm ls -g --depth=0 --link=true                # List all linked packages
 ```
 
 ## Angular NG
