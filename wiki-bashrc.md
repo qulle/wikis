@@ -30,7 +30,9 @@ alias commands='printf "
         dev : Root directory for all dev projects
 
     == NPM
-        npmcomponents : Prints globally installed npm packages
+        npmgc : Prints global installed npm packages
+        npmgl : Prints global linked packages
+        npmgs : Prints global symlinks
 
     == C++
         w++17 : g++ compiler with cpp version 17 and flags [ -Wall -Wextra -Wpedantic ]
@@ -50,7 +52,9 @@ alias h='cd'
 alias dev='cd ~/Documents/dev'
 
 ## NPM
-alias npmcomponents='npm list -global --depth 0'
+alias npmgc='npm list -global --depth=0'
+alias npmgl='npm ls -g --depth=0 --link=true'
+alias npmgs='ls -al $(npm root -g) | grep "\->"'
 
 ## C++
 alias w++17='g++ -std=c++17 -Wall -Wextra -Wpedantic'
