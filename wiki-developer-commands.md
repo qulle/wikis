@@ -81,8 +81,10 @@ $ npm audit                                      # Audit packages and search for
 $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
 
+$ npm root -g                                    # Show path to global node_modules directory
 $ npm ls -g --depth=0                            # List all globally installed packages
 $ npm ls -g --depth=0 --link=true                # List all linked packages
+$ ls -al $(npm root -g) | grep "\->"             # List all linked symlinks
 ```
 
 ## Angular NG
