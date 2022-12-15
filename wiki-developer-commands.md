@@ -59,6 +59,10 @@ $ npm init -y                                    # Init package.json with -y = Y
 $ npm install                                    # Install all dependencies listed in package.json
 $ npm install -g npm@latest                      # Update to latest version of npm
 
+$ npm cache clean                                # Delete the entire cache
+$ npm cache verify                               # Verifies the contents of the cache folder, garbage collecting any unneeded data
+$ npm cache clean --force                        # Delete the entire cache (--force is mandatory from v5 and above)
+
 $ npm config list --json                         # List all configurations
 $ npm config set proxy <proxy-address>           # Set proxy configuration for http
 $ npm config set https-proxy <proxy-address>     # Set proxy configuration for https
