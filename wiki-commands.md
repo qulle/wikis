@@ -21,9 +21,10 @@ C:\> fsutil fsinfo ntfsinfo   C: # Get information about the filesystem (Require
 C:\> fsutil fsinfo volumeInfo C: # Get information about the volume     (Requires elevated privileges)
 C:\> fsutil fsinfo driveType  C: # Get drive typ information
 C:\> fsutil fsinfo drives        # List all available drives
-C:\> sfc /scannow                # Check all the system files and look for errors
 C:\> chkdsk /r                   # Scan hard drive for logical or physical errors
 C:\> driverquery                 # Show complete list of installed drivers and history
+C:\> sfc /scannow                # Scan for and restore corrupted Windows system files against known references
+C:\> dism /Online /Cleanup-Image /RestoreHealth # Restore and download known system file references (src /scannow is often executed after this)
 
 C:\> tasklist                    # List all running processes
 C:\> taskkill /pid <PID>         # Stop running process by pid
