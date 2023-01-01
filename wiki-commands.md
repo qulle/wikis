@@ -126,8 +126,9 @@ C:\> net use s: /delete                                      # Remove mapped dri
 
 ### Open EXE files
 ```
-C:\> start regedit                # Starts register editor
-C:\> start mstsc.exe              # Starts remote desktop client
+C:\> mrt                    # Starts the Microsoft Malicious Software Removal Tool
+C:\> regedit                # Starts register editor
+C:\> mstsc                  # Starts remote desktop client
 ```
 
 ### Open CPL files
