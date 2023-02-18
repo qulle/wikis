@@ -59,6 +59,11 @@ $ npm init -y                                    # Init package.json with -y = Y
 $ npm install                                    # Install all dependencies listed in package.json
 $ npm install -g npm@latest                      # Update to latest version of npm
 
+$ npm login                                      # Create session
+$ npm whoami                                     # Check current user in session
+$ npm logout                                     # End session
+$ npm publish                                    # Push package npmjs.com
+
 $ npm cache clean                                # Delete the entire cache
 $ npm cache verify                               # Verifies the contents of the cache folder, garbage collecting any unneeded data
 $ npm cache clean --force                        # Delete the entire cache (--force is mandatory from v5 and above)
@@ -75,13 +80,13 @@ $ npm uninstall --save-dev @angular/cli          # Uninstall local project versi
 $ npm install --save-dev @angular/cli@latest     # Install latest version of Angular CLI locally
 $ npm install                                    # Reinstall all other dependencies from package.json
 
+$ npm audit                                      # Check packages for security vulnerabilities
 $ npm outdated                                   # List all outdated packages
 $ npm update                                     # Update all outdated packages (minor versions)
 $ npm update "react" "react-dom"                 # Update specific outdated packages (minor versions)
 $ npm install <packagename>@latest               # Update outdated package (major version)
 
 $ npm list                                       # List all installed packages 
-$ npm audit                                      # Audit packages and search for updates
 $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
 
