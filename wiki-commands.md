@@ -95,30 +95,32 @@ C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check 
 
 ### Networking
 ```
-C:\> ipconfig                 # Basic network interfaces
-C:\> ipconfig /all            # Detailed network interfaces
+C:\> ipconfig                   # Basic network interfaces
+C:\> ipconfig /all              # Detailed network interfaces
 C:\> ipconfig /renew
 C:\> ipconfig /renew6
 C:\> ipconfig /release
 C:\> ipconfig /release6
-C:\> ipconfig /displaydns     # Display the contents of the DNS Resolver Cache (PowerShell command available)
-C:\> ipcinfig /flushdns       # Purges the DNS Resolver cache
+C:\> ipconfig /displaydns       # Display the contents of the DNS Resolver Cache (PowerShell command available)
+C:\> ipcinfig /flushdns         # Purges the DNS Resolver cache
 
-C:\> getmac                   # Get mac addresses for the installed media devices
-C:\> arp -a                   # Display ARP (address resolution protocol) cache
-C:\> arp -d                   # Clear ARP cache
+C:\> getmac                     # Get mac addresses for the installed media devices
+C:\> arp -a                     # Display ARP (address resolution protocol) cache
+C:\> arp -d                     # Clear ARP cache
 
-C:\> nslookup google.com      # Name server lookup, display IP for domain
+C:\> nslookup google.com        # Name server lookup, display IP for domain
 
 C:\> ping <HOST/IP>
-C:\> ping <HOST/IP> -t        # Continuous ping
+C:\> ping <HOST/IP> -t          # Continuous ping
 
-C:\> tracert <HOST/IP>        # Trace route to destination
-C:\> pathping <HOST/IP>       # Combines tracert and ping
+C:\> tracert <HOST/IP>          # Trace route to destination
+C:\> pathping <HOST/IP>         # Combines tracert and ping
 
-C:\> nbtstat                  # Utility to display stats and current connections using NetBios over TCP/IP
-C:\> netstat -a               # Display network connections
-C:\> netstat -b               # Display network connections and processes (requires admin privileges)
+C:\> netsh wlan show wlanreport # Generate network HTML report
+
+C:\> nbtstat                    # Utility to display stats and current connections using NetBios over TCP/IP
+C:\> netstat -a                 # Display network connections
+C:\> netstat -b                 # Display network connections and processes (requires admin privileges)
 
 C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
 C:\> net use s: /delete                                      # Remove mapped drive
@@ -214,6 +216,7 @@ C:\> Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersio
 
 ### Disable NetworkAdapter PowerManagement
 ```
+C:\> Get-NetAdapterAdvancedProperty                                                            # Get NetAdapters
 C:\> $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
 C:\> $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
 C:\> $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
