@@ -311,8 +311,7 @@ $ which python3                    # Identify and report the location of the pro
 
 ### Networking
 ```
-$ ifconfig                         # Used for displaying current network configuration information
-
+$ ifconfig                         # Display information about current network configuration
 $ curl -L google.com               # Makes Get request downloading the content for the resource (index.html)
 ```
 
