@@ -197,6 +197,12 @@ C:\> start wmimgmt.msc            # Windows Management
 ```
 
 ## 2. PowerShell
+### Computer
+```
+C:\> Get-CimInstance -ClassName win32_operatingsystem | Format-List -Property *   # Get all system properties
+C:\> (Get-CimInstance -ClassName win32_operatingsystem).Lastbootuptime            # Get timestamp when computer was started
+```
+
 ### Create new GUID
 ```
 C:\> [guid]::NewGuid()
@@ -228,6 +234,11 @@ C:\> $WiFiAdapter.getType()                       # Useful to check datatype, so
 ### Networking
 ```
 C:\> Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
+
+C:\> netsh wlan show networks                            # Display visible networks
+C:\> netsh wlan show networks mode=bssid                 # Display visible networks and access points
+C:\> netsh wlan show interfaces                          # Display interfaces
+C:\> netsh wlan show profiles                            # Display profiles for interfaces
 
 C:\> Test-NetConnection                                  # Test Ping connectivity
 C:\> Test-NetConnection -InformationLevel "Detailed"     # Test Ping connectivity with detailed information
