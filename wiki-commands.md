@@ -201,6 +201,8 @@ C:\> start wmimgmt.msc            # Windows Management
 ```
 C:\> Get-CimInstance -ClassName win32_operatingsystem | Format-List -Property *   # Get all system properties
 C:\> (Get-CimInstance -ClassName win32_operatingsystem).Lastbootuptime            # Get timestamp when computer was started
+
+C:\> powercfg /batteryreport /output "C:\battery-report.html"                     # Generate battery report
 ```
 
 ### Create new GUID
