@@ -27,8 +27,8 @@ C:\> sfc /scannow                # Scan for and restore corrupted Windows system
 C:\> dism /Online /Cleanup-Image /RestoreHealth # Restore and download known system file references (src /scannow is often executed after this)
 
 C:\> tasklist                    # List all running processes
-C:\> taskkill /pid <PID>         # Stop running process by pid
-C:\> taskkill /pid <PID> /F      # Force stop preccess by pid
+C:\> taskkill /pid <pid>         # Stop running process by pid
+C:\> taskkill /pid <pid> /F      # Force stop preccess by pid
 
 C:\> explorer .                  # Start explorer in the current directory
 C:\> start .                     # Start explorer in the current directory
@@ -48,7 +48,7 @@ C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files 
 
 ### Files and directories
 ```
-C:\> type <FILE>                            # Display content of file
+C:\> type <file>                            # Display content of file
 C:\> chcp                                   # Display Console Code Page
 C:\> chcp 65001                             # Set Code Page 65001 => UTF-8
 C:\> chcp 1252                              # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
@@ -59,9 +59,9 @@ C:\> charmap                                # Check characters of different enco
 C:\> dir                                    # List files and directories
 C:\> tree                                   # List files and directories in a tree structure
 C:\> tree | more                            # Limit the output by print sections of data | more works with all commands
-C:\> mkdir <NAME>                           # Make directory with given name
-C:\> rmdir <NAME>                           # Remove directory with given name, must be empty
-C:\> rmdir /Q /S <NAME>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
+C:\> mkdir <name>                           # Make directory with given name
+C:\> rmdir <name>                           # Remove directory with given name, must be empty
+C:\> rmdir /Q /S <name>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
 
 C:\> assoc                                  # Show file associations
 C:\> fc /a file-one.txt file-two.txt        # Compares two files using ascii comparison
@@ -76,10 +76,10 @@ C:\> subst x: /D                            # Remove mapped drive
 ### Manage Windows user accounts
 ```
 C:\> net users                              # Display all user accounts
-C:\> net users <ACCOUNT-NAME>               # Detaild information about user account
-C:\> net users <ACCOUNT-NAME> *             # Change password of account
-C:\> net users add <ACCOUNT-NAME>           # Add user account
-C:\> net users remove <ACCOUNT-NAME>        # Remove user account
+C:\> net users <account-name>               # Detaild information about user account
+C:\> net users <account-name> *             # Change password of account
+C:\> net users add <account-name>           # Add user account
+C:\> net users remove <account-name>        # Remove user account
 
 C:\> whoami                                 # Show current user
 C:\> whoami /user                           # Show detailed info of current user
@@ -110,11 +110,11 @@ C:\> arp -d                     # Clear ARP cache
 
 C:\> nslookup google.com        # Name server lookup, display IP for domain
 
-C:\> ping <HOST/IP>
-C:\> ping <HOST/IP> -t          # Continuous ping
+C:\> ping <host/ip>
+C:\> ping <host/ip> -t          # Continuous ping
 
-C:\> tracert <HOST/IP>          # Trace route to destination
-C:\> pathping <HOST/IP>         # Combines tracert and ping
+C:\> tracert <host/ip>          # Trace route to destination
+C:\> pathping <host/ip>         # Combines tracert and ping
 
 C:\> netsh wlan show wlanreport # Generate network HTML report
 
