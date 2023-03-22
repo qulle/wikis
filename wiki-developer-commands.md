@@ -53,6 +53,20 @@ $ dotnet list <PROJECT-NAME> reference           # List all project references i
 ```
 
 ## NPM
+### Semantics
+```
+1.2.3                                           # Major = 1, Minor = 2, Patch = 3
+1.2.3                                           # Dependency pinning, locked to this version and will always install when npm install is run
+^1.2.3                                          # Possible result could be 1.3.2
+~1.2.3                                          # Possible result could be 1.2.4
+
+Caret (^) — a caret is the default prefix you get from npm after installing a new package. 
+It gives you the highest minor version available with its highest patch version.
+
+Tilde (~) — a tilde prefix will only promote patch versions, meaning that you’ll get the highest patch version for your current minor.
+```
+
+### CLI
 ```
 $ npm init                                       # Init package.json
 $ npm init -y                                    # Init package.json with -y = Yes to all settings.
