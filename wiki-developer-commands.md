@@ -86,6 +86,7 @@ $ npm update                                     # Update all outdated packages 
 $ npm update "react" "react-dom"                 # Update specific outdated packages (minor versions)
 $ npm install <packagename>@latest               # Update outdated package (major version)
 
+$ npm view <package-name>                        # Fetch information about package from https://registry.npmjs.org/<package-name>
 $ npm list                                       # List all installed packages 
 $ npm install                                    # Install all available updates
 $ npm install <packagename>@version              # Install specific package available update
