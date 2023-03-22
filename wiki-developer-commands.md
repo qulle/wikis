@@ -33,12 +33,12 @@ $ csc -langversion:?
 $ dotnet --version                               # Check version of dotnet
 
 $ dotnet new gitignore                           # Create a .gitignore file with useful content
-$ dotnet new webapi -n <NAME>                    # Create a new webapi project
+$ dotnet new webapi -n <name>                    # Create a new webapi project
 $ dotnet build                                   # Build the project
 $ dotnet run                                     # Run the project
-$ dotnet add package <NAME>                      # Add dependencies to the project
+$ dotnet add package <name>                      # Add dependencies to the project
 
-$ dotnet ef migrations add <NAME>                # Create a migration when changes have been made in the models
+$ dotnet ef migrations add <name>                # Create a migration when changes have been made in the models
 $ dotnet ef migrations remove                    # If the migration scripts are not to your satisfaction, undo and fix before add once again
 $ dotnet ef database update                      # Perform migrations to the database
 
@@ -46,10 +46,10 @@ $ dotnet tool install --global dotnet-ef         # Command to install the EF too
 $ dotnet tool update --global dotnet-ef          # Command to update the EF tools
 
 $ dotnet list package                            # List all (nuget) packages that is used in a solution or csproj
-$ dotnet list <PROJECT-NAME> package             # List all (nuget) packages in a specific project
+$ dotnet list <project-name> package             # List all (nuget) packages in a specific project
 
 $ dotnet list reference                          # List all project references, what csproj:s that knows/uses other csproj:s
-$ dotnet list <PROJECT-NAME> reference           # List all project references in a specific project
+$ dotnet list <project-name> reference           # List all project references in a specific project
 ```
 
 ## NPM
@@ -98,12 +98,12 @@ $ npm audit                                      # Check packages for security v
 $ npm outdated                                   # List all outdated packages
 $ npm update                                     # Update all outdated packages (minor versions)
 $ npm update "react" "react-dom"                 # Update specific outdated packages (minor versions)
-$ npm install <packagename>@latest               # Update outdated package (major version)
+$ npm install <package-name>@latest              # Update outdated package (major version)
 
 $ npm view <package-name>                        # Fetch information about package from https://registry.npmjs.org/<package-name>
 $ npm list                                       # List all installed packages 
 $ npm install                                    # Install all available updates
-$ npm install <packagename>@version              # Install specific package available update
+$ npm install <package-name>@version             # Install specific package available update
 
 $ npm root -g                                    # Show path to global node_modules directory
 $ explorer $(npm root -g)                        # Open global node_modules in explorer
@@ -146,7 +146,7 @@ $ ng g p <pipe-name>
 
 ## Python
 ```
-$ pip install <packagename>                      # Install packages from repository
+$ pip install <package-name>                     # Install packages from repository
 $ pip freeze                                     # List which modules that are installed with pip install and the versions of these modules
 $ pip list                                       # List all the Python packages installed in an environment
 $ python <script-name> <parameters>              # Run Python-script files
