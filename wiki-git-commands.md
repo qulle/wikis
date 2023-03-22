@@ -14,14 +14,14 @@ $ git config --global user.email "john.doe@domain.com"
 ### Start empty local git repo
 ```
 $ git init
-$ git clone <URL>
+$ git clone <url>
 ```
 
 ### Three ways to track remote branch 
 ```
-$ git push -u <origin/BRANCH-NAME> <LOCAL-BRANCH-NAME>
-$ git branch -u <origin/BRANCH-NAME>
-$ git branch --set-upstream-to <origin/BRANCH-NAME>
+$ git push -u origin/<branch-name> <locale-branch-name>
+$ git branch -u origin/<branch-name>
+$ git branch --set-upstream-to origin/<branch-name>
 ```
 
 ## Commit and push/pull
@@ -45,9 +45,9 @@ $ git commit --amend --no-edit                 # Note, this will create a new co
 $ git commit --amend --no-edit --date=now      # Update last commit with new timestamp, also creates new commit hash
 $ git commit --amend --author="John Doe <john.doe@domain.com>" --no-edit  # Update author of the last commit
 
-$ git checkout -- <FILE>                       # Undo changes that not have been commited (-- is to target files, if branch have same name)
-$ git restore <FILE>                           # Undo changes that not have been staged
-$ git restore --staged <FILE>                  # Remove files that have been changed and staged
+$ git checkout -- <filename>                   # Undo changes that not have been commited (-- is to target files, if branch have same name)
+$ git restore <filename>                       # Undo changes that not have been staged
+$ git restore --staged <filename>              # Remove files that have been changed and staged
 
 $ git clean -n                                 # List files that will be deleted
 $ git clean -f                                 # Delete untracked files
@@ -60,10 +60,10 @@ $ git reset --soft HEAD~1                      # Undo the last commit and preser
 $ git reset --hard HEAD~1                      # Undo the last commit and don't preserve changes
 $ git reset --hard HEAD@{1}                    # Undo the previous reset --hard HEAD~1
 $ git reflog                                   # Show log och git ref history
-$ git reset --hard <COMMIT HASH>               # Undo any reset --hard
+$ git reset --hard <commit-hash>               # Undo any reset --hard
 
-$ git rm --cached <file>                       # To stop tracking a file, it must be removed from the index
-$ git rm -r --cached <folder>                  # To stop tracking a folder, it must be removed from the index
+$ git rm --cached <filename>                   # To stop tracking a file, it must be removed from the index
+$ git rm -r --cached <folder-name>             # To stop tracking a folder, it must be removed from the index
 
 $ git mv --force src/ts/file.ts src/ts/File.ts # Rename file that already is tracked
 ```
@@ -96,7 +96,7 @@ $ git reset --hard HEAD~1
 ### Pull
 ```
 $ git fetch                                         # Check if any new changes have been made in remote
-$ git merge <BRANCH-NAME-TO-MERGE-INTO-CURRENT>     # Insert changes from one branch into the current branch
+$ git merge <branch-name-to-merge-info-current>     # Insert changes from one branch into the current branch
 $ git pull                                          # Try download any changes from remote, alias for git fetch and git merge
 ```
 
@@ -105,14 +105,15 @@ $ git pull                                          # Try download any changes f
 $ git branch                                                 # Show all local branches
 $ git branch -r                                              # Show remote branches
 $ git branch -vv                                             # Show what remote branches the local branches are tracking, if any
-$ git branch -d <BRANCH-NAME>                                # Delete local branch 
-$ git branch -D <BRANCH-NAME>                                # Force delete local branch that have uncommitted changes
+$ git branch -d <branch-name>                                # Delete local branch 
+$ git branch -D <branch-name>                                # Force delete local branch that have uncommitted changes
+$ git push origin --delete <branch-name>                     # Delete branch from remote
 
-$ git checkout -b <NEW-BRANCH-NAME>                          # Create new local branch based on the current branch
-$ git checkout -b <NEW-BRANCH-NAME> origin/<BRANCH-NAME>     # Create new local branch and set up to track remote
+$ git checkout -b <branch-name>                              # Create new local branch based on the current branch
+$ git checkout -b <branch-name> origin/<branch-name>         # Create new local branch and set up to track remote
 
-$ git branch -m <NEW-BRANCH-NAME>                            # Renames current branch
-$ git branch -m <OLD-BRANCH-NAME> <NEW-BRANCH-NAME>          # Renames any branch
+$ git branch -m <branch-name>                                # Renames current branch
+$ git branch -m <branch-name-old> <branch-name-new>          # Renames any branch
 
 $ git fetch --prune origin                                   # Clean delete branch at remote and also fetch
 $ git remote prune origin                                    # Clean delete branch at remote
@@ -121,7 +122,7 @@ $ git config --global fetch.prune true                       # Configure to prun
 
 ## Working with history
 ```
-$ git rebase -i <COMMIT-HASH>     # Enables powerful commands to be made on historical commits, like squashing history into one commit
+$ git rebase -i <commit-hash>                                # Enables powerful commands to be made on historical commits, like squashing history into one commit
 ```
 
 ## Logging
