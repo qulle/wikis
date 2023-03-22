@@ -48,7 +48,7 @@ ENTRYPOINT ["dotnet", "WebStore.dll"]
 Naming convention `<Docker Hub ID>/Project Name>:<Tag Version>`
 ```
 $ docker build .                         # Build image anonymous
-$ docker build . -t <IMAGE-NAME:TAG>     # Build image using name and tag
+$ docker build . -t <image-name:tag>     # Build image using name and tag
 ```
 
 Use `.dockerignore` to exclude files and directories from the build process. 
@@ -74,15 +74,15 @@ $ docker push <IMAGE-NAME>
 
 ### Delete image
 ```
-$ docker rmi <IMAGE-ID>     # Delete single image
+$ docker rmi <image-id>     # Delete single image
 $ docker image prune        # Delete dangling images
 $ docker image prune -a     # Delete all unused images
 ```
 
 ### Save and load image (.tar)
 ```
-$ docker save <IMAGE-ID> > <FILE.TAR>     # Save image 
-$ docker load -i <FILE.TAR>               # Load image
+$ docker save <image-id> > <file.tar>     # Save image 
+$ docker load -i <file.tar>               # Load image
 ```
 
 ## 3. Container
@@ -97,53 +97,53 @@ $ docker ps -a     # list all containers
 ### Get information about containers
 ```
 $ docker status                       # Get info about running containers
-$ docker inspect <CONTAINER-NAME>     # Get info about one container as JSON
-$ docker logs <CONTAINER-NAME>        # Get logs about container
-$ docker port <CONTAINER-ID>          # Show mapped ports of a container
-$ docker diff <CONTAINER-ID>          # Show all modified files in a container
-$ docker top <CONTAINER-ID>           # Show all running processes of a container
+$ docker inspect <container-name>     # Get info about one container as JSON
+$ docker logs <container-name>        # Get logs about container
+$ docker port <container-id>          # Show mapped ports of a container
+$ docker diff <container-id>          # Show all modified files in a container
+$ docker top <container-id>           # Show all running processes of a container
 ```
 
 ### Run container
 ```
-$ docker run <IMAGE-NAME:TAG>                                 # Basic usage
-$ docker run --name <CONTAINER-NAME> <IMAGE-NAME:TAG>         # Specify name
-$ docker run -d <IMAGE-NAME:TAG>                              # Run container in detached mode (background mode not ockupying shell)
-$ docker run -it <IMAGE-NAME:TAG>                             # Run container in interactive mode (-i = input, -t = echo output)
-$ docker run -p 8080:80 <IMAGE-NAME:TAG>                      # Mapping local port 8080 to remote container port 80
-$ docker run -P <IMAGE-NAME:TAG>                              # Mapping all ports
-$ docker run --hostname <HOSTNAME:IP> <IMAGE-NAME:TAG>        # Assign hostname to container
-$ docker run -v <HOST-DIR:CONTAINER-DIR> <IMAGE-NAME:TAG>     # Map local directory into container directory
-$ docker run --rm <IMAGE-NAME:TAG>                            # Remove container when stopped
+$ docker run <image-name:tag>                                 # Basic usage
+$ docker run --name <container-name> <image-name:tag>         # Specify name
+$ docker run -d <image-name:tag>                              # Run container in detached mode (background mode not ockupying shell)
+$ docker run -it <image-name:tag>                             # Run container in interactive mode (-i = input, -t = echo output)
+$ docker run -p 8080:80 <image-name:tag>                      # Mapping local port 8080 to remote container port 80
+$ docker run -P <image-name:tag>                              # Mapping all ports
+$ docker run --hostname <hostname:ip> <image-name:tag>        # Assign hostname to container
+$ docker run -v <host-dir:container-dir> <image-name:tag>     # Map local directory into container directory
+$ docker run --rm <image-name:tag>                            # Remove container when stopped
 ```
 
 ### Execute command in the container
 ```
-$ docker exec -it <CONTAINER-NAME> npm -v        # Displays the npm version
-$ docker exec -it <CONTAINER-NAME> /bin/bash     # Enter shell of container
+$ docker exec -it <container-name> npm -v        # Displays the npm version
+$ docker exec -it <container-name> /bin/bash     # Enter shell of container
 ```
 
 ### Copy files to/from container
 ```
-$ docker cp <CONTAINER:SOURCE> <HOST-TARGET>     # Copy from container to host
-$ docker cp <HOST-TARGET> <CONTAINER:SOURCE>     # Copy from host to container
+$ docker cp <container:source> <host-target>     # Copy from container to host
+$ docker cp <host-target> <container:source>     # Copy from host to container
 ```
 
 ### Create new image from running container
 ```
 $ apt-get update                                              # Update to enable installation of programs
 $ apt-get install npm                                         # Install npm through the shell of a running container
-$ docker commit <CONTAINER-NAME> <NEW-IMAGE-NAME>             # Create image that will have npm installed
+$ docker commit <container-name> <new-image-name>             # Create image that will have npm installed
 ```
 
 ### Basic container manipulations
 ```
-$ docker start <CONTAINER-NAME>                               # Start container
-$ docker stop <CONTAINER-NAME>                                # Stop container
-$ docker restart <CONTAINER-NAME>                             # Restart container
-$ docker rename <OLD-CONTAINER-NAME> <NEW-CONTAINER-NAME>     # Rename container
-$ docker rm <CONTAINER-NAME>                                  # Delete container
-$ docker rm <CONTAINER-NAME> --force                          # Delete running container
+$ docker start <container-name>                               # Start container
+$ docker stop <container-name>                                # Stop container
+$ docker restart <container-name>                             # Restart container
+$ docker rename <old-container-name> <new-container-name>     # Rename container
+$ docker rm <container-name>                                  # Delete container
+$ docker rm <container-name> --force                          # Delete running container
 $ docker container prune                                      # Delete stopped containers
 ```
 
