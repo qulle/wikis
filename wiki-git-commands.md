@@ -123,6 +123,7 @@ $ git config --global fetch.prune true                       # Configure to prun
 ## Working with history
 ```
 $ git rebase -i <commit-hash>                                # Enables powerful commands to be made on historical commits, like squashing history into one commit
+$ git rebase --abort                                         # Abort ongoing rebase (main|REBASE)
 ```
 
 ## Logging
