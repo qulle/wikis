@@ -24,6 +24,7 @@ C:\> Get-ChildItem                                      # Singel command
 C:\> Get-ChildItem | Select-Object Name                 # Piping output to Select-Object and only selects Name property
 C:\> Get-ChildItem | Select-Object -First 1             # Select the first item that is returned
 C:\> Get-ChildItem | Select-Object -Index 0             # Select the first item by its index (Same as above)
+C:\> Get-ChildItem | Select-Object *                    # Select all properties on the object
 
 C:\> Get-ChildItem | Get-Member                         # Return properties and methods for given object
 C:\> Get-ChildItem | Select-Object Name | Get-Member    # Return methods for Name property
@@ -36,6 +37,7 @@ C:\> (Get-ChildItem | Select-Object -First 1).Name      # Return pure property w
 C:\> Get-Help Select-Object                             # Get documentation about given command
 C:\> Get-Help Select-Object -Full                       # Get full documentation about given command
 C:\> Get-Help *printer*                                 # List all documentation containing printer
+C:\> Update-Help                                        # Updated the documentation, (requires admin privileges)
 ```
 
 ## Output Formatting
@@ -55,30 +57,42 @@ C:\> Get-ChildItem | Out-GridView                       # Detailed GUI output wi
 
 ## Handling Files
 ```
+C:\> New-Item .\file.txt                                # Create new document with name file.txt
+C:\> New-Item -ItemType Directory folder                # Create new directory with name folder
 C:\> Move-Item .\file.txt .\Desktop\                    # Move file to new location
-C:\> Move-Item .\file.txt .\Desktop\                    # Copy file to new location
+C:\> Copy-Item .\file.txt .\Desktop\                    # Copy file to new location
 C:\> Remove-Item .\file.txt                             # Remove file
 C:\> Remove-Item .\folder                               # Remove folder
 ```
 
+## Profiles and Execution Policies
+```
+C:\> $profile                                           # Get current users profile
+C:\> $profile | Get-Object *                            # Get all profiles
+C:\> notepad $profile                                   # Opens profile-file to edit, might need to create file and/or full path
+
+C:\> Get-ExecutionPolicy -List                          # List the different profiles available for restricting execution
+C:\> Set-ExecutionPolicy Restricted                     # Sets the executionpolicy for the LocalMachine (requires admin privileges)
+C:\> Set-ExecutionPolicy Restricted -Scope CurrentUser  # Sets the executionpolicy for the CurrentUser (requires admin privileges)
+```
+
 ## Computer
 ```
+C:\> Get-Variable                                        # View all predefined variables
+C:\> Get-ChildItem Env:                                  # View all environment variables in the current PowerShell session
+
 C:\> Get-CimInstance -ClassName win32_operatingsystem | Format-List -Property *   # Get all system properties
 C:\> (Get-CimInstance -ClassName win32_operatingsystem).Lastbootuptime            # Get timestamp when computer was started
+```
 
+## Power Management
+```
 C:\> powercfg /batteryreport /output "C:\battery-report.html"                     # Generate battery report
 ```
 
 ## Create new Global Unique Identifier (GUID)
 ```
 C:\> [Guid]::NewGuid()
-```
-
-## Script execution policy
-```
-C:\> Get-ExecutionPolicy -List                            # List the different profiles available for restricting execution
-C:\> Set-ExecutionPolicy Restricted                       # Sets the executionpolicy for the LocalMachine (requires admin privileges)
-C:\> Set-ExecutionPolicy Restricted -Scope CurrentUser    # Sets the executionpolicy for the CurrentUser (requires admin privileges)
 ```
 
 ## Export list of installed programs to textfile
@@ -110,10 +124,4 @@ C:\> Test-NetConnection                                  # Test Ping connectivit
 C:\> Test-NetConnection -InformationLevel "Detailed"     # Test Ping connectivity with detailed information
 C:\> Test-NetConnection -Port 80                         # Test TCP connectivity on port 80
 C:\> Test-NetConnection <hostname/ip> -Port 80           # Test TCP connectivity on port 80 for specified host
-```
-
-## Set startup path through profile
-```
-C:\> notepad $profile
-Set-Location C:\Users\<USERNAME>\Documents\              # Add line to the profile-file in notepad
 ```
