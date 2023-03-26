@@ -10,7 +10,8 @@ PowerShell uses a verb-noun pair for the names of cmdlets and for their derived 
 ## Aliases
 PowerShell can execute commands like `dir` `ls` etc. This is because of aliases. Known commands from CMD and Bash have been made available to speed up common tasks and makes it easier for people coming from other shells. Display all aliases with this command.
 ```
-$ Get-Alias
+C:\> Get-Alias                                          # Alias for this is GAL
+C:\> Get-Alias *ec*                                     # Get aliases containing ec (echo, select)
 ```
 
 ## Cmdlets
@@ -24,7 +25,7 @@ C:\> Get-ChildItem | Select-Object Name                 # Piping output to Selec
 C:\> Get-ChildItem | Select-Object -First 1             # Select the first item that is returned
 C:\> Get-ChildItem | Select-Object -Index 0             # Select the first item by its index (Same as above)
 
-C:\> Get-ChildItem | Get-Member                         # Return all properties and methods
+C:\> Get-ChildItem | Get-Member                         # Return properties and methods for given object
 C:\> Get-ChildItem | Select-Object Name | Get-Member    # Return methods for Name property
 
 C:\> (Get-ChildItem | Select-Object -First 1).Name      # Return pure property without table format
@@ -35,6 +36,29 @@ C:\> (Get-ChildItem | Select-Object -First 1).Name      # Return pure property w
 C:\> Get-Help Select-Object                             # Get documentation about given command
 C:\> Get-Help Select-Object -Full                       # Get full documentation about given command
 C:\> Get-Help *printer*                                 # List all documentation containing printer
+```
+
+## Output Formatting
+```
+C:\> Get-ChildItem | Format-Table                       # Format as table (default)
+C:\> Get-ChildItem | Format-Wide                        # Wide format without table headers
+C:\> Get-ChildItem | Format-List                        # Detailed output with more properties
+C:\> Get-ChildItem | Format-List *                      # Detailed output with all properties
+```
+
+## Output Redirecting
+```
+C:\> Get-ChildItem > .\directory.txt                    # Redirecting using common stream
+C:\> Get-ChildItem | Out-File .\directory.txt           # Redirecting using Out-
+C:\> Get-ChildItem | Out-GridView                       # Detailed GUI output with filter options
+```
+
+## Handling Files
+```
+C:\> Move-Item .\file.txt .\Desktop\                    # Move file to new location
+C:\> Move-Item .\file.txt .\Desktop\                    # Copy file to new location
+C:\> Remove-Item .\file.txt                             # Remove file
+C:\> Remove-Item .\folder                               # Remove folder
 ```
 
 ## Computer
@@ -85,7 +109,7 @@ C:\> netsh wlan show profiles                            # Display profiles for 
 C:\> Test-NetConnection                                  # Test Ping connectivity
 C:\> Test-NetConnection -InformationLevel "Detailed"     # Test Ping connectivity with detailed information
 C:\> Test-NetConnection -Port 80                         # Test TCP connectivity on port 80
-C:\> Test-NetConnection <localhost/ip> -Port 80          # Test TCP connectivity on port 80 for specified host
+C:\> Test-NetConnection <hostname/ip> -Port 80           # Test TCP connectivity on port 80 for specified host
 ```
 
 ## Set startup path through profile
