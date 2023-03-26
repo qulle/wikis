@@ -4,6 +4,21 @@ A living document with useful commands (Windows 10), not intended as a complete 
 ## Note
 This used to be a private repo but i changed it to be public because of ease of access for me. Use it as a reference if you like it but `i am not accountable for what happens when you execute commands in your environment`. Use with causion and Google commands that you don't know.
 
+## About
+PowerShell uses a verb-noun pair for the names of cmdlets and for their derived dotNET classes. The verb part of the name identifies the action that the cmdlet performs. The noun part of the name identifies the entity on which the action is performed.
+
+## Aliases
+PowerShell can execute commands like `dir` `ls` etc. This is because of aliases. Known commands from CMD and Bash have been made available to speed up common tasks and makes it easier for people coming from other shells. Display all aliases with this command.
+```
+$ Get-Alias
+```
+
+## Cmdlets
+How to work with the shell when building, piping and executing commands.
+```
+
+```
+
 ## Computer
 ```
 C:\> Get-CimInstance -ClassName win32_operatingsystem | Format-List -Property *   # Get all system properties
@@ -12,9 +27,9 @@ C:\> (Get-CimInstance -ClassName win32_operatingsystem).Lastbootuptime          
 C:\> powercfg /batteryreport /output "C:\battery-report.html"                     # Generate battery report
 ```
 
-## Create new GUID
+## Create new Global Unique Identifier (GUID)
 ```
-C:\> [guid]::NewGuid()
+C:\> [Guid]::NewGuid()
 ```
 
 ## Script execution policy
@@ -58,5 +73,5 @@ C:\> Test-NetConnection <localhost/ip> -Port 80          # Test TCP connectivity
 ## Set startup path through profile
 ```
 C:\> notepad $profile
-Set-Location C:\Users\<USERNAME>\Documents\ # Add line to the profile-file in notepad
+Set-Location C:\Users\<USERNAME>\Documents\              # Add line to the profile-file in notepad
 ```
