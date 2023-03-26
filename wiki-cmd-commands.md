@@ -6,37 +6,37 @@ This used to be a private repo but i changed it to be public because of ease of 
 
 ## Computer
 ```
-C:\> ver                         # Display current version number of Windows
-C:\> hostname                    # Show name of host
-C:\> systeminfo                  # Show information about the system
-C:\> msinfo32                    # System information GUI with detailed information about the system
-C:\> dxdiag                      # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
-C:\> winver                      # Show information about Windows
+C:\> ver                                    # Display current version number of Windows
+C:\> hostname                               # Show name of host
+C:\> systeminfo                             # Show information about the system
+C:\> msinfo32                               # System information GUI with detailed information about the system
+C:\> dxdiag                                 # Used to test DirectX functionality and troubleshoot video- or sound-related hardware problems
+C:\> winver                                 # Show information about Windows
 
 C:\> wmic bios get serialnumber                                                  # Get BIOS serial number of current machine
 C:\> wmic /user:Administrator /node:<remote-computer-name> bios get serialnumber # Get BIOS serial number of remote machine
 
-C:\> fsutil fsinfo ntfsinfo   C: # Get information about the filesystem (Requires elevated privileges)
-C:\> fsutil fsinfo volumeInfo C: # Get information about the volume     (Requires elevated privileges)
-C:\> fsutil fsinfo driveType  C: # Get drive typ information
-C:\> fsutil fsinfo drives        # List all available drives
-C:\> chkdsk /r                   # Scan hard drive for logical or physical errors
-C:\> driverquery                 # Show complete list of installed drivers and history
-C:\> sfc /scannow                # Scan for and restore corrupted Windows system files against known references
+C:\> fsutil fsinfo ntfsinfo   C:            # Get information about the filesystem (Requires elevated privileges)
+C:\> fsutil fsinfo volumeInfo C:            # Get information about the volume     (Requires elevated privileges)
+C:\> fsutil fsinfo driveType  C:            # Get drive typ information
+C:\> fsutil fsinfo drives                   # List all available drives
+C:\> chkdsk /r                              # Scan hard drive for logical or physical errors
+C:\> driverquery                            # Show complete list of installed drivers and history
+C:\> sfc /scannow                           # Scan for and restore corrupted Windows system files against known references
 C:\> dism /Online /Cleanup-Image /RestoreHealth # Restore and download known system file references (src /scannow is often executed after this)
 
-C:\> tasklist                    # List all running processes
-C:\> taskkill /pid <pid>         # Stop running process by pid
-C:\> taskkill /pid <pid> /F      # Force stop preccess by pid
+C:\> tasklist                               # List all running processes
+C:\> taskkill /pid <pid>                    # Stop running process by pid
+C:\> taskkill /pid <pid> /F                 # Force stop preccess by pid
 
-C:\> explorer .                  # Start explorer in the current directory
-C:\> start .                     # Start explorer in the current directory
+C:\> explorer .                             # Start explorer in the current directory
+C:\> start .                                # Start explorer in the current directory
 
-C:\> path                        # Display dump of current PATH config
-C:\> ECHO.%PATH:;= & ECHO.%      # Display pretty dump of current PATH config
+C:\> path                                   # Display dump of current PATH config
+C:\> ECHO.%PATH:;= & ECHO.%                 # Display pretty dump of current PATH config
 
-C:\> start shell:startup         # Open the Startup folder for current user
-C:\> start shell:common startup  # Open the Startup folder for all users (Not working from CMD, only Win + R)
+C:\> start shell:startup                    # Open the Startup folder for current user
+C:\> start shell:common startup             # Open the Startup folder for all users (Not working from CMD, only Win + R)
 ```
 
 ## Programs
@@ -94,32 +94,32 @@ C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check 
 
 ## Networking
 ```
-C:\> ipconfig                   # Basic network interfaces
-C:\> ipconfig /all              # Detailed network interfaces
+C:\> ipconfig                     # Basic network interfaces
+C:\> ipconfig /all                # Detailed network interfaces
 C:\> ipconfig /renew
 C:\> ipconfig /renew6
 C:\> ipconfig /release
 C:\> ipconfig /release6
-C:\> ipconfig /displaydns       # Display the contents of the DNS Resolver Cache (PowerShell command available)
-C:\> ipcinfig /flushdns         # Purges the DNS Resolver cache
+C:\> ipconfig /displaydns         # Display the contents of the DNS Resolver Cache (PowerShell command available)
+C:\> ipcinfig /flushdns           # Purges the DNS Resolver cache
 
-C:\> getmac                     # Get mac addresses for the installed media devices
-C:\> arp -a                     # Display ARP (address resolution protocol) cache
-C:\> arp -d                     # Clear ARP cache
+C:\> getmac                       # Get mac addresses for the installed media devices
+C:\> arp -a                       # Display ARP (address resolution protocol) cache
+C:\> arp -d                       # Clear ARP cache
 
-C:\> nslookup google.com        # Name server lookup, display IP for domain
+C:\> nslookup google.com          # Name server lookup, display IP for domain
 
 C:\> ping <host/ip>
-C:\> ping <host/ip> -t          # Continuous ping
+C:\> ping <host/ip> -t            # Continuous ping
 
-C:\> tracert <host/ip>          # Trace route to destination
-C:\> pathping <host/ip>         # Combines tracert and ping
+C:\> tracert <host/ip>            # Trace route to destination
+C:\> pathping <host/ip>           # Combines tracert and ping
 
-C:\> netsh wlan show wlanreport # Generate network HTML report
+C:\> netsh wlan show wlanreport   # Generate network HTML report
 
-C:\> nbtstat                    # Utility to display stats and current connections using NetBios over TCP/IP
-C:\> netstat -a                 # Display network connections
-C:\> netstat -b                 # Display network connections and processes (requires admin privileges)
+C:\> nbtstat                      # Utility to display stats and current connections using NetBios over TCP/IP
+C:\> netstat -a                   # Display network connections
+C:\> netstat -b                   # Display network connections and processes (requires admin privileges)
 
 C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
 C:\> net use s: /delete                                      # Remove mapped drive
@@ -127,9 +127,9 @@ C:\> net use s: /delete                                      # Remove mapped dri
 
 ## Open EXE files
 ```
-C:\> mrt                    # Starts the Microsoft Malicious Software Removal Tool
-C:\> regedit                # Starts register editor
-C:\> mstsc                  # Starts remote desktop client
+C:\> mrt                          # Starts the Microsoft Malicious Software Removal Tool
+C:\> regedit                      # Starts register editor
+C:\> mstsc                        # Starts remote desktop client
 ```
 
 ## Open CPL files
