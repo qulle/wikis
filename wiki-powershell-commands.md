@@ -14,9 +14,27 @@ $ Get-Alias
 ```
 
 ## Cmdlets
-How to work with the shell when building, piping and executing commands.
+How to work with the shell when building, piping and executing commands etc.
+```
+C:\> Get-Command                                        # List all commands
+C:\> Get-Command *printer*                              # List all commands containing printer
+
+C:\> Get-ChildItem                                      # Singel command
+C:\> Get-ChildItem | Select-Object Name                 # Piping output to Select-Object and only selects Name property
+C:\> Get-ChildItem | Select-Object -First 1             # Select the first item that is returned
+C:\> Get-ChildItem | Select-Object -Index 0             # Select the first item by its index (Same as above)
+
+C:\> Get-ChildItem | Get-Member                         # Return all properties and methods
+C:\> Get-ChildItem | Select-Object Name | Get-Member    # Return methods for Name property
+
+C:\> (Get-ChildItem | Select-Object -First 1).Name      # Return pure property without table format
 ```
 
+## Help Pages
+```
+C:\> Get-Help Select-Object                             # Get documentation about given command
+C:\> Get-Help Select-Object -Full                       # Get full documentation about given command
+C:\> Get-Help *printer*                                 # List all documentation containing printer
 ```
 
 ## Computer
