@@ -117,6 +117,7 @@ C:\> pathping <host/ip>                     # Combines tracert and ping
 
 C:\> netsh wlan show profile                # Show all profiles
 C:\> netsh wlan show profile name           # Show detailed info about profile
+C:\> netsh wlan show profile name key=clear # Show detailed info about profile including password
 C:\> netsh wlan show wlanreport             # Generate network HTML report
 
 C:\> nbtstat                                # Utility to display stats and current connections using NetBios over TCP/IP
