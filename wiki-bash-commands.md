@@ -22,7 +22,7 @@ $ history -c                       # Clear all history
 $ top                              # Monitor running processes and the resources
 ```
 
-## Files and directories
+## Files and Directories
 ```
 $ ll                               # List files and directories in list format
 $ ls                               # List files and directories
