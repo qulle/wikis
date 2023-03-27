@@ -45,7 +45,7 @@ C:\> start shell:common startup             # Open the Startup folder for all us
 C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" 
 ```
 
-## Files and directories
+## Files and Directories
 ```
 C:\> type <file>                            # Display content of file
 C:\> chcp                                   # Display Console Code Page
@@ -72,7 +72,7 @@ C:\> subst x: C:\Folder\Example             # Map local directory to drive lette
 C:\> subst x: /D                            # Remove mapped drive
 ```
 
-## Manage Windows user accounts
+## Manage Windows User Accounts
 ```
 C:\> net users                              # Display all user accounts
 C:\> net users <account-name>               # Detaild information about user account
@@ -128,14 +128,14 @@ C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drive
 C:\> net use s: /delete                                      # Remove mapped drive
 ```
 
-## Open EXE files
+## Open EXE Files
 ```
 C:\> mrt                          # Starts the Microsoft Malicious Software Removal Tool
 C:\> regedit                      # Starts register editor
 C:\> mstsc                        # Starts remote desktop client
 ```
 
-## Open CPL files
+## Open CPL Files
 ```
 C:\> control appwiz.cpl           # Add and remove programs
 C:\> control inetcpl.cpl          # Internet settings
@@ -158,7 +158,7 @@ C:\> control mmsys.cpl            # Sounds and Audio Device Properties
 C:\> control nusrmgr.cpl          # User settings
 ```
 
-## Open MSC files
+## Open MSC Files
 ```
 C:\> start certmgr.msc            # Certificate Manager
 C:\> start ciadv.msc              # Indexing Service
@@ -179,7 +179,7 @@ C:\> start services.msc           # System Services
 C:\> start wmimgmt.msc            # Windows Management 
 ```
 
-## Windows enviroment path variables
+## Windows Enviroment Path Variables
 ```
 %AllUsersProfile%                                           # Open the All User's Profile C:\ProgramData
 %AppData%                                                   # Opens AppData folder C:\Users\{username}\AppData\Roaming
