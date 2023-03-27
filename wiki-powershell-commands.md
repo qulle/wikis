@@ -83,25 +83,25 @@ C:\> Set-ExecutionPolicy Restricted -Scope CurrentUser  # Sets the executionpoli
 
 ## Variables and Types
 ```
-C:\> Get-TypeData                                                                 # Get all datatypes
-C:\> Get-TypeData *ip*                                                            # Get all datatypes containing ip
-C:\> Get-Process                                                                  # Get all running proccesses
-C:\> Get-Process | Select-Object -First 1                                         # Get first item in processes
-C:\> (Get-Process | Select-Object -First 1).GetType()                             # Get the type of the first item (Process)
-C:\> (Get-Process | Select-Object -First 1).GetType().FullName                    # Get the full namespace of the type
+C:\> Get-TypeData                                                  # Get all datatypes
+C:\> Get-TypeData *ip*                                             # Get all datatypes containing ip
+C:\> Get-Process                                                   # Get all running proccesses
+C:\> Get-Process | Select-Object -First 1                          # Get first item in processes
+C:\> (Get-Process | Select-Object -First 1).GetType()              # Get the type of the first item (Process)
+C:\> (Get-Process | Select-Object -First 1).GetType().FullName     # Get the full namespace of the type
 
-C:\> $email = [MailAddress]"john.doe@gmail.com"                                   # Casting given data to datatype of MailAddress
-C:\> $email.GetType()                                                             # Get type of variable
+C:\> $email = [MailAddress]"john.doe@gmail.com"                    # Casting given data to datatype of MailAddress
+C:\> $email.GetType()                                              # Get type of variable
 ```
 
 ## PSDrives
 Creates temporary and persistent drives that are mapped to or associated with a location in a data store. 
 ```
-C:\> Get-PSDrive                                                                  # Get all PSDrive contexts
-C:\> Set-Location Variable:                                                       # Changing to the PSDrive Variable as context
-C:\> Set-Location C:                                                              # Changing to the PSDrive C disk as context
+C:\> Get-PSDrive                                                   # Get all PSDrive contexts
+C:\> Set-Location Variable:                                        # Changing to the PSDrive Variable as context
+C:\> Set-Location C:                                               # Changing to the PSDrive C disk as context
 
-C:\> $Env:windir                                                                  # Access a variable inside the PSDrive Env
+C:\> $Env:windir                                                   # Access a variable inside the PSDrive Env
 ```
 
 ## Computer
@@ -136,8 +136,8 @@ C:\> $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPower
 C:\> $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
 C:\> $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
 
-C:\> $WiFiAdapter | Format-List -Property *       # To list all properties on variable
-C:\> $WiFiAdapter.GetType()                       # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
+C:\> $WiFiAdapter | Format-List -Property *              # To list all properties on variable
+C:\> $WiFiAdapter.GetType()                              # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
 ```
 
 ## Networking
