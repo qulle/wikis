@@ -55,7 +55,7 @@ C:\> Get-ChildItem | Out-File .\directory.txt           # Redirecting using Out-
 C:\> Get-ChildItem | Out-GridView                       # Detailed GUI output with filter options
 ```
 
-## Handling Files
+## Files and Directories
 ```
 C:\> New-Item .\file.txt                                # Create new document with name file.txt
 C:\> New-Item -ItemType Directory folder                # Create new directory with name folder
