@@ -94,32 +94,34 @@ C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check 
 
 ## Networking
 ```
-C:\> ipconfig                     # Basic network interfaces
-C:\> ipconfig /all                # Detailed network interfaces
+C:\> ipconfig                               # Basic network interfaces
+C:\> ipconfig /all                          # Detailed network interfaces
 C:\> ipconfig /renew
 C:\> ipconfig /renew6
 C:\> ipconfig /release
 C:\> ipconfig /release6
-C:\> ipconfig /displaydns         # Display the contents of the DNS Resolver Cache (PowerShell command available)
-C:\> ipcinfig /flushdns           # Purges the DNS Resolver cache
+C:\> ipconfig /displaydns                   # Display the contents of the DNS Resolver Cache (PowerShell command available)
+C:\> ipcinfig /flushdns                     # Purges the DNS Resolver cache
 
-C:\> getmac                       # Get mac addresses for the installed media devices
-C:\> arp -a                       # Display ARP (address resolution protocol) cache
-C:\> arp -d                       # Clear ARP cache
+C:\> getmac                                 # Get mac addresses for the installed media devices
+C:\> arp -a                                 # Display ARP (address resolution protocol) cache
+C:\> arp -d                                 # Clear ARP cache
 
-C:\> nslookup google.com          # Name server lookup, display IP for domain
+C:\> nslookup google.com                    # Name server lookup, display IP for domain
 
 C:\> ping <host/ip>
-C:\> ping <host/ip> -t            # Continuous ping
+C:\> ping <host/ip> -t                      # Continuous ping
 
-C:\> tracert <host/ip>            # Trace route to destination
-C:\> pathping <host/ip>           # Combines tracert and ping
+C:\> tracert <host/ip>                      # Trace route to destination
+C:\> pathping <host/ip>                     # Combines tracert and ping
 
-C:\> netsh wlan show wlanreport   # Generate network HTML report
+C:\> netsh wlan show profile                # Show all profiles
+C:\> netsh wlan show profile name           # Show detailed info about profile
+C:\> netsh wlan show wlanreport             # Generate network HTML report
 
-C:\> nbtstat                      # Utility to display stats and current connections using NetBios over TCP/IP
-C:\> netstat -a                   # Display network connections
-C:\> netstat -b                   # Display network connections and processes (requires admin privileges)
+C:\> nbtstat                                # Utility to display stats and current connections using NetBios over TCP/IP
+C:\> netstat -a                             # Display network connections
+C:\> netstat -b                             # Display network connections and processes (requires admin privileges)
 
 C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
 C:\> net use s: /delete                                      # Remove mapped drive
