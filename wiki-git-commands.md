@@ -78,7 +78,11 @@ $ git push -f     # Force push files ex. when history has diverged, use with cau
 ```
 1. Github
 a) Remove the gh-pages branch from github
+$ git push origin --delete gh-pages
+
 b) Checkout the main branch locally
+$ git checkout main
+$ git pull
 
 2. Add dist folder to the staged area
 $ git add dist -f
@@ -95,9 +99,9 @@ $ git reset --hard HEAD~1
 
 ### Pull
 ```
-$ git fetch                                         # Check if any new changes have been made in remote
-$ git merge <branch-name-to-merge-info-current>     # Insert changes from one branch into the current branch
-$ git pull                                          # Try download any changes from remote, alias for git fetch and git merge
+$ git fetch                                                  # Check if any new changes have been made in remote
+$ git merge <branch-name-to-merge-into-current>              # Insert changes from one branch into the current branch
+$ git pull                                                   # Try download any changes from remote, alias for git fetch and git merge
 ```
 
 ## Branching
@@ -111,6 +115,7 @@ $ git push origin --delete <branch-name>                     # Delete branch fro
 
 $ git checkout -b <branch-name>                              # Create new local branch based on the current branch
 $ git checkout -b <branch-name> origin/<branch-name>         # Create new local branch and set up to track remote
+$ git checkout -b tag-v1.0.0 tags/v1.0.0                     # Create new local branch and set up to track specific remote-tag
 
 $ git branch -m <branch-name>                                # Renames current branch
 $ git branch -m <branch-name-old> <branch-name-new>          # Renames any branch
@@ -122,8 +127,9 @@ $ git config --global fetch.prune true                       # Configure to prun
 
 ## Working with history
 ```
-$ git rebase -i <commit-hash>                                # Enables powerful commands to be made on historical commits, like squashing history into one commit
+$ git rebase -i <commit-hash>                                # Enables commands to be made on historical commits, like squashing history into one commit
 $ git rebase --abort                                         # Abort ongoing rebase (main|REBASE)
+$ git merge --abort                                          # Abort ongoing merge (main|MERGING)
 ```
 
 ## Logging
@@ -132,41 +138,41 @@ $ git log
 $ git log --pretty=oneline
 $ git log --graph --oneline --all
 
-$ git ls-tree -r master --name-only                            # List all files that are tracked by Git from current directory and down
-$ git ls-files                                                 # Alias for the command above
-$ git ls-tree --full-tree --name-only -r HEAD                  # Show all files that are tracked by Git
+$ git ls-tree -r master --name-only                          # List all files that are tracked by Git from current directory and down
+$ git ls-files                                               # Alias for the command above
+$ git ls-tree --full-tree --name-only -r HEAD                # Show all files that are tracked by Git
 ```
 
 ## Tagging
 ```
-$ git tag                                                      # List available tags
-$ git tag v1.4.0.                                              # Basic lightweight tag
-$ git tag -a v1.4.0 -m "Release version 1.4.0"                 # Annotated tag
-$ git tag -a v1.2.0 -m "Release version 1.2.0" 9fceb02         # Tagging later by specifying commit hash
-$ git tag -d v1.4.0                                            # Delete tag
+$ git tag                                                    # List available tags
+$ git tag v1.4.0.                                            # Basic lightweight tag
+$ git tag -a v1.4.0 -m "Release version 1.4.0"               # Annotated tag
+$ git tag -a v1.2.0 -m "Release version 1.2.0" 9fceb02       # Tagging later by specifying commit hash
+$ git tag -d v1.4.0                                          # Delete tag
 
-$ git push origin v1.4.0                                       # Push specific tag to remote
-$ git push origin --tags                                       # Push all tags to remote
-$ git push origin --tags --force                               # Force push all tags to remote
+$ git push origin v1.4.0                                     # Push specific tag to remote
+$ git push origin --tags                                     # Push all tags to remote
+$ git push origin --tags --force                             # Force push all tags to remote
 ```
 
 ## Stashing
 ```
-$ git stash save --keep-index --include-untracked     # Make stash of all files
-$ git stash list                                      # List all stashes
-$ git stash show                                      # Show contents of latest stash
-$ git stash show stash@{index}                        # Show contents of specific stash
-$ git stash apply                                     # Get latest stashed changes back, without removing the stash from the history
-$ git stash apply stash@{index}                       # Get specific stashed changes back, without removing the stash from the history
-$ git stash pop                                       # Get latest stashed changes and remove from history
-$ git stash pop stash@{index}                         # Get specific stashed changes and remove from history
+$ git stash save --keep-index --include-untracked            # Make stash of all files
+$ git stash list                                             # List all stashes
+$ git stash show                                             # Show contents of latest stash
+$ git stash show stash@{index}                               # Show contents of specific stash
+$ git stash apply                                            # Get latest stashed changes back, without removing the stash from the history
+$ git stash apply stash@{index}                              # Get specific stashed changes back, without removing the stash from the history
+$ git stash pop                                              # Get latest stashed changes and remove from history
+$ git stash pop stash@{index}                                # Get specific stashed changes and remove from history
 ```
 
 ## Special Git files
 ```
-.gitignore     # Used to disregards some files and folders from being tracked
-.gitkeep       # Non standard file, used to track empty folders, git only track files
-.gitattributes # Non standard file, used to ignore language-detection
+.gitignore                                                   # Used to disregard some files and folders from being tracked
+.gitkeep                                                     # Non standard file, used to track empty folders, git only track files
+.gitattributes                                               # Non standard file, used to ignore language-detection
 ```
 
 ### .gitignore example
