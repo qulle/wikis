@@ -47,82 +47,86 @@ C:\Windows\System32\runas.exe /savecred /user:domain\username "C:\Program Files 
 
 ## Files and Directories
 ```
-C:\> type <file>                            # Display content of file
-C:\> chcp                                   # Display Console Code Page
-C:\> chcp 65001                             # Set Code Page 65001 => UTF-8
-C:\> chcp 1252                              # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
-C:\> chcp 437                               # Set Code Page 437   => Character set of the original IBM PC
-C:\> chcp 850                               # Set Code Page 850   => Latin-1 - Western European languages
-C:\> charmap                                # Check characters of different encodings and fonts installed on your system
+C:\> type <file>                                    # Display content of file
+C:\> chcp                                           # Display Console Code Page
+C:\> chcp 65001                                     # Set Code Page 65001 => UTF-8
+C:\> chcp 1252                                      # Set Code Page 1252  => Windows-1252 Single-byte character encoding of the Latin alphabet
+C:\> chcp 437                                       # Set Code Page 437   => Character set of the original IBM PC
+C:\> chcp 850                                       # Set Code Page 850   => Latin-1 - Western European languages
+C:\> charmap                                        # Check characters of different encodings and fonts installed on your system
 
-C:\> dir                                    # List files and directories
-C:\> tree                                   # List files and directories in a tree structure
-C:\> tree | more                            # Limit the output by print sections of data | more works with all commands
-C:\> mkdir <name>                           # Make directory with given name
-C:\> rmdir <name>                           # Remove directory with given name, must be empty
-C:\> rmdir /Q /S <name>                     # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
+C:\> dir                                            # List files and directories
+C:\> tree                                           # List files and directories in a tree structure
+C:\> tree | more                                    # Limit the output by print sections of data | more works with all commands
+C:\> mkdir <name>                                   # Make directory with given name
+C:\> rmdir <name>                                   # Remove directory with given name, must be empty
+C:\> rmdir /Q /S <name>                             # Remove directory that contains directories and/or files, /Q = quiet, /S = subfolders
 
-C:\> assoc                                  # Show file associations
-C:\> fc /a file-one.txt file-two.txt        # Compares two files using ascii comparison
-C:\> fc /b file-one.jpg file-two.jpg        # Compares two files using binary comparison
-C:\> fsutil file createnew test.txt 1048576 # Generate file of size 1MB
+C:\> assoc                                          # Show file associations
+C:\> fc /a file-one.txt file-two.txt                # Compares two files using ascii comparison
+C:\> fc /b file-one.jpg file-two.jpg                # Compares two files using binary comparison
+C:\> fsutil file createnew test.txt 1048576         # Generate file of size 1MB
 
-C:\> subst                                  # Display list of current virtual drives
-C:\> subst x: C:\Folder\Example             # Map local directory to drive letter
-C:\> subst x: /D                            # Remove mapped drive
+C:\> subst                                          # Display list of current virtual drives
+C:\> subst x: C:\Folder\Example                     # Map local directory to drive letter
+C:\> subst x: /D                                    # Remove mapped drive
+
+C:\> split large-file.log -b 500m                   # Split file into chunks of 500MB each
+C:\> split large-file.log -l 1000                   # Split file info chunks of 1000 rows each
+C:\> split large-file.log chunk -l 1000 -a 5 -d     # Split info chunks and use "chunk" as prefix name. Suffix to be 5 digits long.
 ```
 
 ## Manage Windows User Accounts
 ```
-C:\> net users                              # Display all user accounts
-C:\> net users <account-name>               # Detaild information about user account
-C:\> net users <account-name> *             # Change password of account
-C:\> net users add <account-name>           # Add user account
-C:\> net users remove <account-name>        # Remove user account
+C:\> net users                                      # Display all user accounts
+C:\> net users <account-name>                       # Detaild information about user account
+C:\> net users <account-name> *                     # Change password of account
+C:\> net users add <account-name>                   # Add user account
+C:\> net users remove <account-name>                # Remove user account
 
-C:\> whoami                                 # Show current user
-C:\> whoami /user                           # Show detailed info of current user
-C:\> whoami /groups                         # Show what groups the current user is member of
+C:\> whoami                                         # Show current user
+C:\> whoami /user                                   # Show detailed info of current user
+C:\> whoami /groups                                 # Show what groups the current user is member of
 
-C:\> gpupdate                               # Update the domain group policy
-C:\> gpupdate /f                            # Force update the group policy
-C:\> gpresult /Scope User /v                # List current policies for current user
-C:\> gpresult /Scope Computer /v            # List current policies for this machine
+C:\> gpupdate                                       # Update the domain group policy
+C:\> gpupdate /f                                    # Force update the group policy
+C:\> gpresult /Scope User /v                        # List current policies for current user
+C:\> gpresult /Scope Computer /v                    # List current policies for this machine
 
 C:\> runas /noprofile /user:username@domain "cmd /k whoami /groups"     # Check groups for other user ex. domain admin account
 ```
 
 ## Networking
 ```
-C:\> ipconfig                               # Basic network interfaces
-C:\> ipconfig /all                          # Detailed network interfaces
+C:\> ipconfig                                       # Basic network interfaces
+C:\> ipconfig /all                                  # Detailed network interfaces
 C:\> ipconfig /renew
 C:\> ipconfig /renew6
 C:\> ipconfig /release
 C:\> ipconfig /release6
-C:\> ipconfig /displaydns                   # Display the contents of the DNS Resolver Cache (PowerShell command available)
-C:\> ipcinfig /flushdns                     # Purges the DNS Resolver cache
+C:\> ipconfig /displaydns                           # Display the contents of the DNS Resolver Cache (PowerShell command available)
+C:\> ipcinfig /flushdns                             # Purges the DNS Resolver cache
 
-C:\> getmac                                 # Get mac addresses for the installed media devices
-C:\> arp -a                                 # Display ARP (address resolution protocol) cache
-C:\> arp -d                                 # Clear ARP cache
+C:\> getmac                                         # Get mac addresses for the installed media devices
+C:\> arp -a                                         # Display ARP (address resolution protocol) cache
+C:\> arp -d                                         # Clear ARP cache
 
-C:\> nslookup google.com                    # Name server lookup, display IP for domain
+C:\> nslookup google.com                            # Name server lookup, display IP for domain
 
 C:\> ping <host/ip>
-C:\> ping <host/ip> -t                      # Continuous ping
+C:\> ping <host/ip> -t                              # Continuous ping
 
-C:\> tracert <host/ip>                      # Trace route to destination
-C:\> pathping <host/ip>                     # Combines tracert and ping
+C:\> tracert <host/ip>                              # Trace route to destination
+C:\> pathping <host/ip>                             # Combines tracert and ping
 
-C:\> netsh wlan show profile                # Show all profiles
-C:\> netsh wlan show profile name           # Show detailed info about profile
-C:\> netsh wlan show profile name key=clear # Show detailed info about profile including password
-C:\> netsh wlan show wlanreport             # Generate network HTML report
+C:\> netsh wlan show profile                        # Show all profiles
+C:\> netsh wlan show profile name                   # Show detailed info about profile
+C:\> netsh wlan show profile name key=clear         # Show detailed info about profile including password
+C:\> netsh wlan show wlanreport                     # Generate network HTML report
 
-C:\> nbtstat                                # Utility to display stats and current connections using NetBios over TCP/IP
-C:\> netstat -a                             # Display network connections
-C:\> netstat -b                             # Display network connections and processes (requires admin privileges)
+C:\> nbtstat                                        # Utility to display stats and current connections using NetBios over TCP/IP
+C:\> netstat -a                                     # Display network connections
+C:\> netstat -b                                     # Display network connections and processes (requires admin privileges)
 
 C:\> net use s: \\network.unit\directory /persistent:Yes     # Map network drives to drive letter
 C:\> net use s: /delete                                      # Remove mapped drive
