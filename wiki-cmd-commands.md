@@ -73,7 +73,7 @@ C:\> subst x: /D                                    # Remove mapped drive
 
 C:\> split large-file.log -b 500m                   # Split file into chunks of 500MB each
 C:\> split large-file.log -l 1000                   # Split file info chunks of 1000 rows each
-C:\> split large-file.log chunk -l 1000 -a 5 -d     # Split info chunks and use "chunk" as prefix name. Suffix to be 5 digits long.
+C:\> split large-file.log chunk -l 1000 -a 5 -d     # Split info chunks and use "chunk" as prefix name and suffix to be of length 5 using digits
 ```
 
 ## Manage Windows User Accounts
