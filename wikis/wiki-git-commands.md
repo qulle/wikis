@@ -137,6 +137,7 @@ $ git merge --abort                                          # Abort ongoing mer
 $ git log
 $ git log --pretty=oneline
 $ git log --graph --oneline --all
+$ git show <commit-hash>                                     # Show information about specific commit 
 
 $ git ls-tree -r master --name-only                          # List all files that are tracked by Git from current directory and down
 $ git ls-files                                               # Alias for the command above
