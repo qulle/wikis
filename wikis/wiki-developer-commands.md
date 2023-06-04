@@ -66,6 +66,13 @@ It gives you the highest minor version available with its highest patch version.
 Tilde (~) — a tilde prefix will only promote patch versions, meaning that you’ll get the highest patch version for your current minor.
 ```
 
+### Config
+```
+$ npm config delete script-shell                                                # Fallback to system specific default shell
+$ npm config set script-shell "C:\\Program Files (x86)\\git\\bin\\bash.exe"     # Setting bash as default shell on Windows x86
+$ npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"           # Setting bash as default shell in Windows x64
+```
+
 ### CLI
 ```
 $ npm init                                       # Init package.json
