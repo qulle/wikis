@@ -28,6 +28,11 @@ $ csc program.cs
 $ csc -langversion:?
 ```
 
+### IIS
+```
+C:\> appcmd list wp                              # List Worker Processes for application pools C:\Windows\System32\inetsrc>appcmd list wp
+```
+
 ### Dotnet commands
 ```
 $ dotnet --version                               # Check version of dotnet
