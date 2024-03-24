@@ -124,22 +124,6 @@ C:\> powercfg /batteryreport /output "C:\battery-report.html"                   
 C:\> [Guid]::NewGuid()
 ```
 
-## Export Installed Programs
-```
-C:\> Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*,HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table -AutoSize > $Profile\..\..\InstalledPrograms.txt
-```
-
-## Disable NetworkAdapter PowerManagement
-```
-C:\> Get-NetAdapterAdvancedProperty                                                            # Get NetAdapters
-C:\> $WiFiAdapter = Get-NetAdapter -Physical -name "Wi-Fi" | Get-NetAdapterPowerManagement     # Get Adapter by name
-C:\> $WiFiAdapter.AllowComputerToTurnOffDevice = 'Disabled'                                    # Set powersave mode to disabled
-C:\> $WiFiAdapter | Set-NetworkAdapterPowerManagement                                          # Set changes to the adapter
-
-C:\> $WiFiAdapter | Format-List -Property *              # To list all properties on variable
-C:\> $WiFiAdapter.GetType()                              # Useful to check datatype, some pipe operations might not return what you expected Array vs Object
-```
-
 ## Networking
 ```
 C:\> Get-DnsClientCache # Display the contents of the DNS Resolver Cache (CMD command available)
