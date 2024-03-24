@@ -71,6 +71,9 @@ alias gitcommands='printf "
 ## Program
 alias e='explorer .'
 alias c='code .'
+alias vsc17='"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\devenv.exe" &'
+alias vsc19='"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\devenv.exe" &'
+alias vsc22='"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\devenv.exe" &'
 
 ## Bash
 alias rbash='source ~/.bashrc'
