@@ -42,7 +42,7 @@ alias commands='printf "
 alias gitcommands='printf "
     == COMMIT
        git add .
-       git commit -m `Message of the commit`
+       git commit -m \"Message of the commit\"
        git commit --amend --no-edit
 
     == PUSH
@@ -52,7 +52,7 @@ alias gitcommands='printf "
     == MERGE
        git merge origin/main
        git add .
-       git commit -m `Resolved merge conflict`
+       git commit -m \"Resolved merge conflict\"
        git merge --abort
 
     == RESET
