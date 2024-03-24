@@ -52,7 +52,7 @@ alias gitcommands='printf "
     == MERGE
        git merge origin/main
        git add .
-       git commit -m "Resolved merge conflict"
+       git commit -m `Resolved merge conflict`
        git merge --abort
 
     == RESET
