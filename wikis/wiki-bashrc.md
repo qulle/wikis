@@ -14,29 +14,58 @@ cd C:\\Users\\daniel\\Documents\\dev
 ## General
 alias commands='printf "
     == GENERAL
-        commands : Prints this list
-        cls      : Clear screen
+       commands : Prints this list
+       cls      : Clear screen
 
     == PROGRAM
-        e : Start Explorer in current directory
-        c : Start VSCode in current directory
+       e : Start Explorer in current directory
+       c : Start VSCode in current directory
 
     == BASH
-        reloadbash : Reloads bash config in current shell
-        editbash   : VSCode editing this file
+       rbash : Reloads bash config in current shell
+       ebash : VSCode editing this file
 
     == DIRECTORY SHORTCUTS
-        h   : Home location
-        dev : Root directory for all dev projects
+       h   : Home location
+       dev : Root directory for all dev projects
 
     == NPM
-        npmgc : Prints global installed npm packages
-        npmgl : Prints global linked packages
-        npmgs : Prints global symlinks
+       npmgc : Prints global installed npm packages
+       npmgl : Prints global linked packages
+       npmgs : Prints global symlinks
 
     == C++
-        w++17 : g++ compiler with cpp version 17 and flags [ -Wall -Wextra -Wpedantic ]
+       w++17 : g++ compiler with cpp version 17 and flags [ -Wall -Wextra -Wpedantic ]
 "'
+alias gitcommands='printf "
+    == COMMIT
+       git add .
+       git commit -m "Message of the commit"
+       git commit --amend --no-edit
+
+    == PUSH
+       git push
+       git push -f
+
+    == MERGE
+       git merge origin/main
+       git add .
+       git commit -m "Resolved merge conflict"
+       git merge --abort
+
+    == RESET
+       git reset
+       git reset --soft HEAD~1
+       git reset --hard HEAD~1
+       git reset --hard HEAD@{1}
+
+    == LOG
+       git log
+       git log --raw
+       git log --pretty=oneline
+       git log --graph --oneline --all
+"'
+
 alias cls='clear'
 
 ## Program
@@ -44,8 +73,8 @@ alias e='explorer .'
 alias c='code .'
 
 ## Bash
-alias reloadbash='source ~/.bashrc'
-alias editbash='code ~/.bashrc'
+alias rbash='source ~/.bashrc'
+alias ebash='code ~/.bashrc'
 
 ## Directory shortcuts
 alias h='cd'
@@ -55,6 +84,9 @@ alias dev='cd ~/Documents/dev'
 alias npmgc='npm list -global --depth=0'
 alias npmgl='npm ls -g --depth=0 --link=true'
 alias npmgs='ls -al $(npm root -g) | grep "\->"'
+
+## GIT
+alias rowcount='git ls-files | xargs wc -l'
 
 ## C++
 alias w++17='g++ -std=c++17 -Wall -Wextra -Wpedantic'
