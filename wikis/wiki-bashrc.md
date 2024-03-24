@@ -12,6 +12,7 @@ cd C:\\Users\\daniel\\Documents\\dev
 # Aliases
 #-----------------------------------------------------------------------------------------------------------
 ## General
+alias cls='clear'
 alias commands='printf "
     == GENERAL
        commands : Prints this list
@@ -37,10 +38,11 @@ alias commands='printf "
     == C++
        w++17 : g++ compiler with cpp version 17 and flags [ -Wall -Wextra -Wpedantic ]
 "'
+
 alias gitcommands='printf "
     == COMMIT
        git add .
-       git commit -m "Message of the commit"
+       git commit -m `Message of the commit`
        git commit --amend --no-edit
 
     == PUSH
@@ -65,8 +67,6 @@ alias gitcommands='printf "
        git log --pretty=oneline
        git log --graph --oneline --all
 "'
-
-alias cls='clear'
 
 ## Program
 alias e='explorer .'
